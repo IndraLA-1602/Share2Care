@@ -1,0 +1,161 @@
+:root {
+  --rust: #b03e21ff;
+  --cinnabar: #e35c3bff;
+  --sandy-brown: #f4a261ff;
+  --saffron: #e9c46aff;
+  --battleship-gray: #898989ff;
+  --white-smoke: #f5f5f5ff;
+  --padd-horizontal: 7rem;
+  --padd-vertical: 6rem;
+  --logo-size: 50px;
+  --other-img: 35px;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(227, 92, 59, 1) 0%,
+    rgba(244, 162, 97, 1) 100%
+  );
+  --title-size: 1.9rem;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 1.2rem;
+  color: var(--white-smoke);
+}
+
+/* HEADER */
+
+header {
+  background: var(--gradient);
+}
+
+/* HEADER BAGIAN ATAS */
+
+.headerup {
+  padding: 3rem var(--padd-horizontal) 0 var(--padd-horizontal);
+  display: flex;
+  justify-content: space-between;
+}
+
+.logo {
+  width: auto;
+  height: var(--logo-size);
+}
+
+.container-nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav img {
+  width: auto;
+  display: inline;
+  height: var(--other-img);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 3rem;
+}
+
+nav a {
+  color: var(--white-smoke);
+  text-decoration: none;
+}
+
+/* JUMBOTRON */
+
+.jumbotron {
+  display: grid;
+  padding: 10rem var(--padd-horizontal);
+  grid-template-columns: 7fr 8fr;
+  gap: 2rem 1.5rem;
+  background-image: url("https://m0p8.c14.e2-2.dev/share2care/aboutus/ornamen.png");
+  background-size: 75% 90%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  z-index: 1000;
+}
+
+.jumbotron-logo {
+  grid-column: 1 / span 2;
+}
+
+h1 {
+  font-size: var(--title-size);
+}
+
+/* section misi kami */
+
+.misi {
+  color: var(--battleship-gray);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--padd-vertical) var(--padd-horizontal);
+  gap: 2rem;
+}
+
+.misi h2 {
+  display: block;
+  width: 25%;
+  font-size: var(--title-size);
+  font-weight: 700;
+  color: var(--rust);
+}
+
+.misi p {
+  width: 60%;
+}
+
+/* SECTION KAMI */
+
+.kami {
+  background: var(--gradient);
+  padding: var(--padd-vertical) var(--padd-horizontal);
+  text-align: center;
+}
+
+.kami h2 {
+  font-size: var(--title-size);
+}
+
+.anggota {
+  padding: 5rem 4rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-smoke);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.user img {
+  height: auto;
+  width: 40px;
+}
+
+.kami h3 {
+  font-size: 1.2rem;
+}
