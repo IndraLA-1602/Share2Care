@@ -137,11 +137,14 @@ h1 {
 .anggota {
   padding: 5rem 4rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
 }
 
 .user {
   display: flex;
+  margin: 1.7rem 3rem;
   align-items: center;
   justify-content: center;
   background-color: var(--white-smoke);
