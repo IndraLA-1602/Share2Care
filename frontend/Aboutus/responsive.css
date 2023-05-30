@@ -1,0 +1,16 @@
+@media screen and (max-width: 1030px) {
+  .container-nav {
+    gap: 1rem;
+  }
+
+  nav {
+    gap: 1.5rem;
+  }
+
+  nav ul {
+    gap: 1.7rem;
+  }
+}
+
+@media screen and (max-width: 790px) {
+}
