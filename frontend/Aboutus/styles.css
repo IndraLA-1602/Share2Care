@@ -199,7 +199,7 @@ footer {
 }
 
 .sosmed button {
-  width: 50%;
+  width: 13rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -207,7 +207,7 @@ footer {
   background-color: var(--cinnabar);
   color: var(--white-smoke);
   border: none;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.5rem;
   border-radius: 2rem;
 }
 
