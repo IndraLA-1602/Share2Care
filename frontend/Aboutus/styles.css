@@ -14,7 +14,8 @@
     rgba(227, 92, 59, 1) 0%,
     rgba(244, 162, 97, 1) 100%
   );
-  --title-size: 1.9rem;
+  --title-size: 1.7rem;
+  --text-size: 1.2rem;
 }
 
 * {
@@ -24,7 +25,7 @@
 }
 
 body {
-  font-size: 1.2rem;
+  font-size: var(--text-size);
   color: var(--white-smoke);
 }
 
@@ -80,7 +81,7 @@ nav a {
 .jumbotron {
   display: grid;
   padding: 10rem var(--padd-horizontal);
-  grid-template-columns: 7fr 8fr;
+  grid-template-columns: 7fr 9fr;
   gap: 2rem 1.5rem;
   background-image: url("https://m0p8.c14.e2-2.dev/share2care/aboutus/ornamen.png");
   background-size: 75% 90%;
@@ -183,6 +184,18 @@ footer {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.sosmed img {
+  width: 1.3rem;
+  height: auto;
+}
+
+.sosmed p {
+  width: 40%;
+  margin-left: 0.3rem;
+  text-align: left;
 }
 
 .sosmed button {
@@ -191,6 +204,11 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  background-color: var(--cinnabar);
+  color: var(--white-smoke);
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
 }
 
 .footer-bawah {
