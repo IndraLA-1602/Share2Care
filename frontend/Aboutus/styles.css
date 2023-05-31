@@ -43,54 +43,9 @@ header {
   background: var(--gradient);
 }
 
-/* HEADER BAGIAN ATAS */
-
-.headerup {
-  padding: 3rem var(--padd-horizontal) 0 var(--padd-horizontal);
-  display: flex;
-  justify-content: space-between;
-}
-
 .logo {
   width: auto;
   height: var(--logo-size);
-}
-
-.container-nav {
-  display: flex;
-  gap: 1.5rem;
-}
-
-nav img {
-  width: auto;
-  display: inline;
-  height: var(--other-img);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
-}
-
-nav ul {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  gap: 1rem;
-}
-
-nav a {
-  color: var(--white-smoke);
-  text-decoration: none;
-  padding: 0.5rem 1rem;
-  border-top-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
-}
-
-nav a:hover {
-  border-bottom: solid;
-  background-color: var(--cinnabar);
 }
 
 /* JUMBOTRON */
@@ -186,58 +141,3 @@ h1 {
 
 /* FOOTER */
 
-footer {
-  background: var(--gradient);
-  padding: 4rem var(--padd-horizontal);
-}
-
-.footer-atas {
-  display: flex;
-  gap: 1rem;
-  padding-bottom: 2rem;
-}
-
-.footer-desc {
-  width: 65%;
-}
-
-.sosmed {
-  width: 35%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 0.5rem;
-}
-
-.sosmed img {
-  width: 1.3rem;
-  height: auto;
-}
-
-.sosmed p {
-  width: 40%;
-  margin-left: 0.3rem;
-  text-align: left;
-}
-
-.sosmed button {
-  width: 13rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: var(--cinnabar);
-  color: var(--white-smoke);
-  border: none;
-  padding: 0.5rem 0.5rem;
-  border-radius: 2rem;
-}
-
-.sosmed button:hover {
-  background-color: var(--rust);
-}
-
-.footer-bawah {
-  font-size: 0.9rem;
-}
