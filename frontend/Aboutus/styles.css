@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;1,400;1,600&display=swap");
+
 :root {
   --rust: #b03e21ff;
   --cinnabar: #e35c3bff;
@@ -15,6 +17,7 @@
     rgba(244, 162, 97, 1) 100%
   );
   --title-size: 1.7rem;
+  --title-weight: 600;
   --text-size: 1.2rem;
 }
 
@@ -22,6 +25,11 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+b {
+  font-weight: var(--title-weight);
 }
 
 body {
@@ -67,6 +75,7 @@ nav {
 
 nav ul {
   display: flex;
+  align-items: center;
   list-style: none;
   gap: 3rem;
 }
@@ -96,6 +105,7 @@ nav a {
 
 h1 {
   font-size: var(--title-size);
+  font-weight: var(--title-weight);
 }
 
 /* section misi kami */
@@ -114,6 +124,7 @@ h1 {
   display: block;
   width: 25%;
   font-size: var(--title-size);
+  font-weight: var(--title-weight);
   font-weight: 700;
   color: var(--rust);
 }
@@ -132,6 +143,7 @@ h1 {
 
 .kami h2 {
   font-size: var(--title-size);
+  font-weight: var(--title-weight);
 }
 
 .anggota {
