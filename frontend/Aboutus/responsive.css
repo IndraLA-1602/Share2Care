@@ -1,4 +1,4 @@
-@media screen and (max-width: 1030px) {
+@media screen and (max-width: 1110px) {
   .container-nav {
     gap: 1rem;
   }
@@ -8,11 +8,59 @@
   }
 
   nav ul {
-    gap: 1.7rem;
+    gap: 0rem;
   }
 }
 
 @media screen and (max-width: 910px) {
+  .jumbotron {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+    text-align: center;
+  }
+
+  .jumbotron p {
+    text-align: justify;
+  }
+
+  .jumbotron-logo {
+    grid-column: 1;
+  }
+
+  .misi {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .misi h2 {
+    width: 100%;
+  }
+
+  .misi p {
+    width: 100%;
+    text-align: justify;
+  }
+
+  .footer-atas {
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .footer-desc {
+    width: 100%;
+  }
+  .sosmed {
+    width: 100%;
+  }
+  .sosmed button {
+    width: 100%;
+  }
+  .sosmed p {
+    width: 80%;
+    margin-left: 0.3rem;
+    text-align: left;
+  }
 }
 
 @media screen and (max-width: 790px) {

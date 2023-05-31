@@ -77,12 +77,20 @@ nav ul {
   display: flex;
   align-items: center;
   list-style: none;
-  gap: 3rem;
+  gap: 1rem;
 }
 
 nav a {
   color: var(--white-smoke);
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-top-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+}
+
+nav a:hover {
+  border-bottom: solid;
+  background-color: var(--cinnabar);
 }
 
 /* JUMBOTRON */
@@ -224,6 +232,10 @@ footer {
   border: none;
   padding: 0.5rem 0.5rem;
   border-radius: 2rem;
+}
+
+.sosmed button:hover {
+  background-color: var(--rust);
 }
 
 .footer-bawah {
