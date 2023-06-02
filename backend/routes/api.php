@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Api\LoginController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,4 +21,6 @@ use App\Http\Controllers\Api\RegisterController;
 //     return $request->user();
 // });
 
-Route::post('/register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('user/register', [RegisterController::class, 'store'])->name('register.store');
+Route::post('user/login', [LoginController::class, 'authenticate'])->name('login');
+Route::post('user/logout', [LoginController::class, 'logout'])->name('logout');
