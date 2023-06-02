@@ -55,6 +55,15 @@ const styleFooterApp = `
     font-size: 0.9rem;
   }
 
+  @media screen and (max-width: 1000px){
+    :host {
+      font-size: var(--text-size-mobile);
+    }
+    .logo {
+      height: var(--logo-size-mobile);
+    }
+  }
+
   @media screen and (max-width: 910px) {
     .footer-atas {
       display: flex;
@@ -75,6 +84,15 @@ const styleFooterApp = `
       width: 80%;
       margin-left: 0.3rem;
       text-align: left;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    footer{
+      padding: 4rem var(--padd-horizontal-mobile);
+    }
+    .footer-bawah {
+      text-align: center;
     }
   }
 `;

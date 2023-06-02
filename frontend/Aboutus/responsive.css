@@ -49,5 +49,42 @@
   }
 }
 
-@media screen and (max-width: 790px) {
+@media screen and (max-width: 1000px) {
+  body {
+    font-size: var(--text-size-mobile);
+  }
+  h1 {
+    font-size: var(--title-size-mobile);
+  }
+  .misi h2 {
+    font-size: var(--title-size-mobile);
+  }
+  .kami h2 {
+    font-size: var(--title-size-mobile);
+  }
+  .kami h3 {
+    font-size: var(--text-size-mobile);
+  }
+  .logo {
+    height: var(--logo-size-mobile);
+  }
+  .user img {
+    width: var(--logo-size-mobile);
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .jumbotron {
+    padding: var(--padd-vertical-mobile) var(--padd-horizontal-mobile);
+  }
+  .misi {
+    padding: var(--padd-vertical-mobile) var(--padd-horizontal-mobile);
+  }
+  .kami {
+    padding: var(--padd-vertical-mobile) var(--padd-horizontal-mobile);
+  }
+  .anggota {
+    padding: calc(var(--padd-vertical-mobile) * 0.3)
+      calc(var(--padd-horizontal-mobile));
+  }
 }

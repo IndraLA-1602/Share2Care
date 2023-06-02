@@ -16,7 +16,8 @@ class HeaderNav extends HTMLElement {
     ${styleHeaderNav}
     </style>
     <div class="headerup">
-        <img class="logo" src="./image/Share2Care_logos.png" alt="" />
+        <div><button class="togling">&#9776;</button>
+        <img class="logo" src="./image/Share2Care_logos.png" alt="" /></div>
         <nav>
           <ul>
             <li><a href="#">Home</a></li>
