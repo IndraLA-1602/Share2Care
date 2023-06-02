@@ -5,6 +5,15 @@ const styleHeaderNav = `
     justify-content: space-between;
     background: var(--gradient);
   }
+
+  .headerup div{
+    display: flex;
+    align-items: center;
+  }
+
+  .headerup button{
+    display: none;
+  }
   
   .container-nav {
     display: flex;
@@ -58,8 +67,37 @@ const styleHeaderNav = `
   }
   
   @media screen and (max-width: 1000px) {
-    nav ul {
+    :host{
+      font-size: var(--text-size-mobile);
+    }
+
+    .logo {
+      height: var(--logo-size-mobile);
+    }
+    nav img {
+      height: var(--other-img-mobile);
+    }
+  }
+
+  @media screen and (max-width: 880px){
+    nav ul{
       display: none;
+    }
+
+    .headerup button{
+      display: inline-block;
+      color:white;
+      font-size: 1.5rem;
+      min-width:55px;
+      min-height:55px;
+      background-color: transparent;
+      border-style: none;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    .headerup{
+      padding: 2rem var(--padd-horizontal-mobile) 0 calc(var(--padd-horizontal-mobile)*0.4);
     }
   }
 `;
