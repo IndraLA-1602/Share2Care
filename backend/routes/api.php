@@ -5,6 +5,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\RegisterController;
+use App\Http\Controllers\Api\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,4 +24,8 @@ use App\Http\Controllers\Api\RegisterController;
 
 Route::post('user/register', [RegisterController::class, 'store'])->name('register.store');
 Route::post('user/login', [LoginController::class, 'authenticate'])->name('login');
-Route::post('user/logout', [LoginController::class, 'logout'])->name('logout');
+
+Route::middleware('auth:sanctum')->group(function (){
+    Route::post('user/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::resource('category', CategoryController::class);
+});
