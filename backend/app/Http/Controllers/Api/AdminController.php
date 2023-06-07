@@ -7,22 +7,20 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Validator;
 
-class LoginController extends BaseController
-{
-    public function __construct()
-    {
-        $this->middleware('auth:sanctum', ['except' => ['authenticate', 'register']]);
-    }
+use App\Models\Admin;
+use Illuminate\Support\Facades\Hash;
 
+class AdminController extends BaseController
+{
     public function authenticate(Request $request)
     {
         $validator = Validator::make($request->all(),[
-            'email' => 'required|string|email',
+            'username' => 'required|string',
             'password' => 'required|string',
         ]);
 
         $credentials = [
-            'email' => $request->email,
+            'username' => $request->username,
             'password' => $request->password,
         ];
         
@@ -30,8 +28,8 @@ class LoginController extends BaseController
             return $this->sendResponse('Failed', $validator->errors());
         }
  
-        if (Auth::attempt($credentials)) {
-            $user = Auth::user();
+        if (Auth::guard('admins')->attempt($credentials)) {
+            $user = Auth::guard('admins')->user();
             // dd($user);
             $token =  $user->createToken('ApiToken')->plainTextToken;
             $data['token'] = $token;
@@ -42,11 +40,23 @@ class LoginController extends BaseController
         return $this->sendResponse('Failed', 'Login Gagal');
     }
 
+    public function register(Request $request)
+    {
+        $user = new Admin;
+        $user->username = $request->username;
+        $user->password = Hash::make($request->password);
+        $user->save();
+        return response()->json([
+            'status' => 'success',
+            'message' => 'Data berhasil diregistrasi',
+        ]);
+    }
+
     public function logout()
     {
-        $user = Auth::guard('users')->user();
-        if($user){
-            $user->tokens()->delete();
+        $removeToken = Auth::guard('api-admins')->user();
+        if($removeToken){
+            $removeToken->tokens()->delete();
             return $this->sendResponse('Success', 'Logout Successfully');
         }
         return $this->sendResponse('Failed', 'Invalid Token');

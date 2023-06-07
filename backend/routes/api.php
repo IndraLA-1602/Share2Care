@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Api\LoginController;
+use App\Http\Controllers\Api\AdminController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -25,7 +26,22 @@ use App\Http\Controllers\Api\CategoryController;
 Route::post('user/register', [RegisterController::class, 'store'])->name('register.store');
 Route::post('user/login', [LoginController::class, 'authenticate'])->name('login');
 
+Route::post('admin/login', [AdminController::class, 'authenticate'])->name('admin.login');
+Route::post('admin/register', [AdminController::class, 'register'])->name('admin.register');
+
 Route::middleware('auth:sanctum')->group(function (){
     Route::post('user/logout', [LoginController::class, 'logout'])->name('logout');
+    Route::post('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
     Route::resource('category', CategoryController::class);
+});
+
+Route::middleware('auth:api-admins')->group(function (){
+    Route::get('admin/test', function() {
+        return "Admin";
+    });
+});
+Route::middleware('auth:users')->group(function (){
+    Route::get('user/test', function() {
+        return "User";
+    });
 });
