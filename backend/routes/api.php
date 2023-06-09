@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\AdminController;
+use App\Http\Controllers\Api\CampaignController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -38,6 +39,7 @@ Route::middleware('auth:sanctum')->group(function (){
 Route::middleware('auth:api-admins')->prefix('admin')->group(function (){
     Route::resource('category', CategoryController::class);
     Route::resource('product', ProductController::class);
+    Route::resource('campaign', CampaignController::class);
 });
 Route::middleware('auth:users')->group(function (){
     Route::get('user/test', function() {
