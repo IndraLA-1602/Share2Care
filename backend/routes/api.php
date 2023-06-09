@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\CategoryController;
+use App\Http\Controllers\Api\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -32,13 +33,11 @@ Route::post('admin/register', [AdminController::class, 'register'])->name('admin
 Route::middleware('auth:sanctum')->group(function (){
     Route::post('user/logout', [LoginController::class, 'logout'])->name('logout');
     Route::post('admin/logout', [AdminController::class, 'logout'])->name('admin.logout');
-    Route::resource('category', CategoryController::class);
 });
 
-Route::middleware('auth:api-admins')->group(function (){
-    Route::get('admin/test', function() {
-        return "Admin";
-    });
+Route::middleware('auth:api-admins')->prefix('admin')->group(function (){
+    Route::resource('category', CategoryController::class);
+    Route::resource('product', ProductController::class);
 });
 Route::middleware('auth:users')->group(function (){
     Route::get('user/test', function() {

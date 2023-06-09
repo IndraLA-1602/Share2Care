@@ -22,7 +22,7 @@ class BaseController extends Controller
     {
         $response = [
             'status' => $status,
-            'message' => $message,
+            'errors' => $message,
         ];
 
         return response()->json($response, $statusCode);
