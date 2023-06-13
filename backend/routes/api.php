@@ -3,6 +3,7 @@
 use App\Http\Controllers\Api\LoginController;
 use App\Http\Controllers\Api\AdminController;
 use App\Http\Controllers\Api\CampaignController;
+use App\Http\Controllers\Api\CartController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -45,4 +46,5 @@ Route::middleware('auth:users')->group(function (){
     Route::get('user/test', function() {
         return "User";
     });
+    Route::resource('cart', CartController::class);
 });
