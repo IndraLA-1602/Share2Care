@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
+use App\Http\Controllers\Api\TransactionController;
+use Midtrans\Transaction;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,4 +49,5 @@ Route::middleware('auth:users')->group(function (){
         return "User";
     });
     Route::resource('cart', CartController::class);
+    Route::get('/test', [TransactionController::class, 'index']);
 });
