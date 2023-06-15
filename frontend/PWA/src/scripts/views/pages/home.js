@@ -1,3 +1,6 @@
+import CampaignList from "../../../data/campaignSource";
+import ProductList from "../../../data/productsSource";
+
 const Home = {
   async render() {
     return `
@@ -17,38 +20,7 @@ const Home = {
       <p>Berbagi Kasih, Menebar Kebaikan Bersama Share2Care!</p>
       <h1>Bergabunglah sekarang dan berikan kontribusi melalui donasi online yang mudah dan bermanfaat</h1> 
       <div class="Campaign_List">
-        <div class="CardCampaign">
-          <div class="container_campaign">
-            <div class="campaign_image">
-              <img src="./public/campaign.png" alt="" style="width:15%">
-            </div>
-            <h2><b>Campaign 1</b></h2> 
-          </div> 
-        </div>
-        <div class="CardCampaign">
-          <div class="container_campaign">
-            <div class="campaign_image">
-              <img src="./public/campaign.png" alt="" style="width:15%">
-            </div>
-            <h2><b>Campaign 2</b></h2> 
-          </div>
-        </div>
-        <div class="CardCampaign">
-          <div class="container_campaign">
-            <div class="campaign_image">
-              <img src="./public/campaign.png" alt="" style="width:15%">
-            </div>
-            <h2><b>Campaign 3</b></h2> 
-          </div> 
-        </div>
-        <div class="CardCampaign">
-          <div class="container_campaign">
-            <div class="campaign_image">
-              <img src="./public/campaign.png" alt="" style="width:15%">
-            </div>
-            <h2><b>Campaign 4</b></h2> 
-          </div>
-        </div>
+        
       </div>
     </div>
 
@@ -90,126 +62,7 @@ const Home = {
       <p>Produk Donasi Kami</p>
       <h1>Donasi Online Mudah dan Bermanfaat di Share2Care</h1>
       <div class="Donasi_list">
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
-        <div class="Card_Donasi">
-          <div class="Container_Donasi">
-            <div class="Donasi_img">
-              <img src="./public/fitur.png" alt="" style="width:15%">
-            </div>
-            <h4> Air Mineral</h4>
-            <p>Le Mineral</p>
-            <h3>Rp. 5000</h3>
-          </div>
-        </div>
+        
       </div>
     </div>
 
@@ -248,7 +101,40 @@ const Home = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const products = await ProductList.listHome();
+    const product = products.data;
+    const campaignsList = await CampaignList.listHome();
+    const campaigns = campaignsList.data;
+
+    const productContainer = document.querySelector(".Donasi_list");
+    const campaignContainer = document.querySelector(".Campaign_List");
+    product.forEach((prod) => {
+      productContainer.innerHTML += `
+      <div class="Card_Donasi">
+        <div class="Container_Donasi">
+          <div class="Donasi_img">
+            <img src="${prod.image}" alt="" style="width:70%">
+          </div>
+          <h4>${prod.product_name}</h4>
+          <p>${prod.category}</p>
+          <h3>Rp. ${prod.price}</h3>
+        </div>
+      </div>
+      `;
+    });
+
+    campaigns.forEach((campaign) => {
+      campaignContainer.innerHTML += `
+      <div class="CardCampaign">
+        <div class="container_campaign">
+          <div class="campaign_image">
+            <img src="./public/campaign.png" alt="" style="width:15%">
+          </div>
+          <h2><b>${campaign.name}</b></h2> 
+        </div> 
+      </div>
+      `;
+    });
   },
 };
 

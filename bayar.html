@@ -15,12 +15,12 @@
 
     <script type="text/javascript">
       const client_key = JSON.parse(localStorage.getItem("client_key"));
-      console.log(client_key.test);
+      console.log(client_key.client_key);
       // For example trigger on button clicked, or any time you need
       var payButton = document.getElementById("pay-button");
       payButton.addEventListener("click", function () {
         // Trigger snap popup. @TODO: Replace TRANSACTION_TOKEN_HERE with your transaction token
-        window.snap.pay(client_key.test);
+        window.snap.pay(client_key.client_key);
         // customer will be redirected after completing payment pop-up
       });
     </script>

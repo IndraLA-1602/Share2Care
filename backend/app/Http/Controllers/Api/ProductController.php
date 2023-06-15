@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Api\BaseController;
+use App\Http\Resources\ProductResource;
 use App\Models\Category;
 use App\Models\Product;
 use Illuminate\Http\Request;
@@ -16,7 +17,12 @@ class ProductController extends BaseController
      */
     public function index()
     {
-        $products = Product::all();
+        if(request()->limit){
+            $query = Product::limit(request()->limit)->get();
+            $products = ProductResource::collection($query);
+            return $this->sendResponse('Success', 'Data berhasil didapatkan', $products);
+        }
+        $products = ProductResource::collection(Product::all());
         return $this->sendResponse('Success', 'Data berhasil didapatkan', $products);
     }
 

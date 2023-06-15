@@ -51,3 +51,6 @@ Route::middleware('auth:users')->group(function (){
     Route::resource('cart', CartController::class);
     Route::get('/test', [TransactionController::class, 'index']);
 });
+
+Route::get('product', [ProductController::class, 'index']);
+Route::get('campaign', [CampaignController::class, 'index']);
