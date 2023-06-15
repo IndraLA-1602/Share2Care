@@ -2,6 +2,58 @@
     .footer__left .description {
       font-size: 14px;
     }
+
+    .side-left-hero h1{
+      font-size: 24px;
+    }
+
+    .side-left p {
+      font-size: 16px;
+    }
+
+    .side-right p {
+      font-size: 16px;
+    }
+
+    .ourMission {
+      padding: 40px;
+    }
+
+    .titleMission h1 {
+      font-size: 24px;
+      text-align: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .ourMission {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .titleMission {
+      order: 1;
+      padding-bottom: 20px;
+    }
+
+    .side-left {
+      order: 2;
+      text-align: center;
+    }
+
+    .hero__inner__aboutUs {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .side-right p {
+      padding-left: 0;
+    }
+
+    .hero__title__aboutUs {
+      padding-bottom: 20px;
+    }
+    
   }
    
   @media screen and (max-width: 700px) {
@@ -67,13 +119,11 @@
     }
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 850px){
     .app-bar__navigation {
       background-color: #E35C3B;
     }
-  }
 
-  @media screen and (max-width: 850px){
     .footer {
       display: inline-block;
     }
@@ -86,9 +136,22 @@
       display: inline-table;
       margin-top: 10px;
     }
-  }
-   
-  @media screen and (min-width: 1200px) {
+
+    .container-profile {
+      flex-direction: column;
+    }
+
+    .hero__inner__aboutUs {
+      padding: 40px;
+    }
+
+    .our {
+      height: 1250px;
+    }
+    
+    .titleMission {
+      padding-right: 20px;
+    }
   }
 
   @media screen and (max-width: 1256px) {
@@ -101,7 +164,14 @@
       width: 100%;
     }
 
-    
+    .hero__tagline__aboutUs {
+      padding-left: 20px;
+    }
+
+    .titleMission {
+      padding-left: 150px;
+      padding-right: 150px;
+    }
   }
    
   @media screen and (min-width: 1600px) {
