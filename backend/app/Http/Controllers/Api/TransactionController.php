@@ -27,8 +27,8 @@ class TransactionController extends Controller
                 'gross_amount' => 10000,
             ),
             'customer_details' => array(
-                'first_name' => $user->name,
-                'email' => $user->email,
+                'first_name' => $user ? $user->name : "test",
+                'email' => $user ? $user->email : "test@test.com",
                 'phone' => '08111222333',
             ),
         );

@@ -15,6 +15,10 @@ class CampaignController extends BaseController
      */
     public function index()
     {
+        if(request()->limit){
+            $campaign = Campaign::limit(request()->limit)->get();
+            return $this->sendResponse('Success', 'Data berhasil didapatkan', $campaign);
+        }
         $campaign = Campaign::all();
         return $this->sendResponse('Success', 'Data berhasil didapatkan', $campaign);
     }
