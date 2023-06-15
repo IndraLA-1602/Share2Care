@@ -53,4 +53,5 @@ Route::middleware('auth:users')->group(function (){
 });
 
 Route::get('product', [ProductController::class, 'index']);
+Route::get('product/{id}', [ProductController::class, 'show']);
 Route::get('campaign', [CampaignController::class, 'index']);

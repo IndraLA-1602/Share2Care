@@ -79,7 +79,12 @@ class ProductController extends BaseController
      */
     public function show(string $id)
     {
-        //
+        $query = Product::find($id);
+        if($query == null){
+            return $this->sendResponse('Success', 'Data gagal didapatkan', "", 404);
+        }
+        $products = ProductResource::make($query);
+        return $this->sendResponse('Success', 'Data berhasil didapatkan', $products);
     }
 
     /**
