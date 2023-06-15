@@ -1,0 +1,146 @@
+.Cart {
+    padding-bottom: 100px ;
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(45deg, #E35C3B, #F4A261);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+  }
+
+  .Cart h2 {
+    padding: 50px 100px 10px 100px;
+    color: white;
+    font-size: 40px;
+    text-align: left;
+  }
+
+  .Cart_padding {
+    padding: 20px 100px;
+  }
+
+  .Cart_title {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: white;
+    color: #E35C3B;
+    padding: 10px 10px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    border-radius: 20px;
+  }
+  .Cart_card_padding {
+    padding-top: 20px;
+  }
+
+  .Cart_card {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .Cart_produk {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 0px 50px;
+  }
+
+  .Cart_img {
+    padding: 70px;
+    background-image: url("../public/indomie.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+  }
+
+  .Cart_detail h4 {
+    color: #E35C3B;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .Cart_detail p {
+    color: #F4A261;
+    padding: 10px 10px;
+    text-align: left;
+    font-size: 24px;
+    font-weight: bold;
+  }
+
+  .Cart_harga h4 {
+    color: #E35C3B;
+    padding: 60px 10px;
+    text-align: center ;
+    font-size: 32px;
+    font-weight: bold;
+  }
+
+  .Cart_jumlah {
+    padding-top: 55px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: center;
+  }
+
+  .Cart_jumlah button:hover {
+    background-color: #F4A261;
+  }
+
+  .Kurang_produk {
+    padding-left: 35px;
+  }
+
+  .Kurang_produk button {
+    position: right;
+    padding: 10px;
+    color: white;
+    background-color: #E35C3B;
+    border: 0;
+    border-radius: 10px 0px 0px 10px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .Banyak_produk {
+    text-align: center;
+  }
+
+  .Banyak_produk h4{
+    font-size: 30px;
+    font-weight: bold;
+    color: #E35C3B;
+  }
+
+  .Tambah_produk button {
+    position: left;
+    padding: 10px;
+    color: white;
+    background-color: #E35C3B;
+    border: 0;
+    border-radius: 0px 10px 10px 0px;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .Cart_donasi {
+    padding: 55px 10px;
+    position: center;
+  }
+
+  .Cart_donasi button{
+    padding: 10px 30px;
+    background-color: #F4A261;
+    color: white;
+    font-size: 24px;
+    border-radius: 20px;
+    border: 0;
+  }
+
+  .Cart_donasi button:hover {
+    background-color: #E35C3B;
+  }
