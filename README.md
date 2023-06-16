@@ -10,3 +10,7 @@ php artisan migrate:fresh --seed
 php artisan storage:link
 php artisan serve
 ```
+
+# Dashboard Website
+
+http://localhost:8000/
