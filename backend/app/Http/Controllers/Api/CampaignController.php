@@ -40,7 +40,7 @@ class CampaignController extends BaseController
             'name' => 'required',
             'alamat' => 'required',
             'desc' => 'required',
-            'province' => 'required',
+            'city' => 'required',
             // 'image' => 'mimes:jpg,jpeg,png',
         ]);
 
@@ -58,7 +58,7 @@ class CampaignController extends BaseController
         $campaign->name = $request->name;
         $campaign->alamat = $request->alamat;
         $campaign->desc = $request->desc;
-        $campaign->province = $request->province;
+        $campaign->city = $request->city;
         $campaign->image = $request->image;
         $campaign->save();
         if($campaign){
@@ -92,7 +92,7 @@ class CampaignController extends BaseController
             'name' => 'required',
             'alamat' => 'required',
             'desc' => 'required',
-            'province' => 'required',
+            'city' => 'required',
             // 'image' => 'mimes:jpg,jpeg,png',
         ]);
 
@@ -114,7 +114,7 @@ class CampaignController extends BaseController
         $campaign->name = $request->name;
         $campaign->alamat = $request->alamat;
         $campaign->desc = $request->desc;
-        $campaign->province = $request->province;
+        $campaign->city = $request->city;
         $campaign->image = $request->image;
         $campaign->save();
         if($campaign){
