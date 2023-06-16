@@ -1,10 +1,14 @@
-import CampaignList from "../../../data/campaignSource";
-import ProductList from "../../../data/productsSource";
-import CONFIG from "../../../globals/config";
+import Campaign from "../../../data/campaignSource";
+import Product from "../../../data/productsSource";
+import {
+  createCampaignList,
+  createProductList,
+} from "../templates/template-creator";
 
 const Home = {
   async render() {
     return `
+    <div class="notif hidden">Data berhasil ditambahkan</div>
     <div class="jumbotron">
       <div class="hero">
         <div class="hero__inner">
@@ -102,41 +106,27 @@ const Home = {
   },
 
   async afterRender() {
-    const products = await ProductList.listHome();
+    const products = await Product.listHome();
     const product = products.data;
-    const campaignsList = await CampaignList.listHome();
+    const campaignsList = await Campaign.listHome();
     const campaigns = campaignsList.data;
 
     const productContainer = document.querySelector(".Donasi_list");
     const campaignContainer = document.querySelector(".Campaign_List");
     product.forEach((prod) => {
-      productContainer.innerHTML += `
-      <div class="Card_Donasi">
-        <div class="Container_Donasi">
-          <div class="Donasi_img">
-            <img src="${
-              CONFIG.IMAGE_URL + prod.image
-            }" alt="" style="width:70%">
-          </div>
-          <h4>${prod.product_name}</h4>
-          <p>${prod.category}</p>
-          <h3>Rp. ${prod.price}</h3>
-        </div>
-      </div>
-      `;
+      productContainer.innerHTML += createProductList(prod);
     });
 
     campaigns.forEach((campaign) => {
-      campaignContainer.innerHTML += `
-      <div class="CardCampaign">
-        <div class="container_campaign">
-          <div class="campaign_image">
-            <img src="./public/campaign.png" alt="" style="width:15%">
-          </div>
-          <h2><b>${campaign.name}</b></h2> 
-        </div> 
-      </div>
-      `;
+      campaignContainer.innerHTML += createCampaignList(campaign);
+    });
+
+    const button = document.querySelectorAll("#cart");
+    button.forEach((element) => {
+      const product = element.getAttribute("data-product");
+      element.addEventListener("click", (e) => {
+        Product.addToCart(product);
+      });
     });
   },
 };

@@ -43,7 +43,6 @@ class CartController extends BaseController
         $validator = Validator::make($request->all(),[
             'product' => 'required',
             'qty' => 'required',
-            'total' => 'required',
         ]);
 
         if( $validator->fails() ){
@@ -58,7 +57,6 @@ class CartController extends BaseController
         $cart->user_id = $user->id;
         $cart->product_id = $request->product;
         $cart->qty = $request->qty;
-        $cart->total = $request->total;
         $cart->save();
 
         if(!$cart){
@@ -96,7 +94,6 @@ class CartController extends BaseController
         $validator = Validator::make($request->all(),[
             'product' => 'number',
             'qty' => 'required',
-            'total' => 'number',
         ]);
 
         if( $validator->fails() ){

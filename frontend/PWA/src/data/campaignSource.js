@@ -1,6 +1,6 @@
 import CONFIG from "../globals/config";
 
-class CampaignList {
+class Campaign {
   static async listHome() {
     const response = await fetch(CONFIG.BASE_URL + "campaign?limit=4");
     const resJson = await response.json();
@@ -8,4 +8,4 @@ class CampaignList {
   }
 }
 
-export default CampaignList;
+export default Campaign;
