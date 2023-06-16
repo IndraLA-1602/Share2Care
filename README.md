@@ -13,4 +13,6 @@ php artisan serve
 
 # Dashboard Website
 
+Username: admin
+password: admin123
 http://localhost:8000/
