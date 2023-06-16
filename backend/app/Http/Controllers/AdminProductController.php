@@ -42,7 +42,7 @@ class AdminProductController extends Controller
             'price' => 'required|integer',
             'desc' => 'required',
             'category' => 'required',
-            'image' => 'mimes:jpg,jpeg,png',
+            'image' => 'mimes:jpg,jpeg,png,webp',
         ]);
 
         $product = new Product;
@@ -98,7 +98,7 @@ class AdminProductController extends Controller
             'price' => 'required|integer',
             'desc' => 'required',
             'category' => 'required',
-            'image' => 'mimes:jpg,jpeg,png',
+            'image' => 'mimes:jpg,jpeg,png,webp',
         ]);
 
         $product = Product::find($id);
@@ -135,7 +135,9 @@ class AdminProductController extends Controller
         $product = Product::find($id);
         $delete = $product->delete();
         if( $delete ){
-            Storage::disk('public')->delete($product->image);
+            if($product->image){
+                Storage::disk('public')->delete($product->image);
+            }
             Alert::toast('Data Berhasil Dihapus', 'success');
             return redirect()->route('product.index');
         }else{

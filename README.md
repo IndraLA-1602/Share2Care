@@ -7,5 +7,6 @@ Capstone Project SIB Dicoding Front End Back End Batch 4
 ```
 composer install
 php artisan migrate:fresh --seed
+php artisan storage:link
 php artisan serve
 ```

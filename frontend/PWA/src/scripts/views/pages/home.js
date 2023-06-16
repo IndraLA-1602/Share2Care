@@ -1,5 +1,6 @@
 import CampaignList from "../../../data/campaignSource";
 import ProductList from "../../../data/productsSource";
+import CONFIG from "../../../globals/config";
 
 const Home = {
   async render() {
@@ -113,7 +114,9 @@ const Home = {
       <div class="Card_Donasi">
         <div class="Container_Donasi">
           <div class="Donasi_img">
-            <img src="${prod.image}" alt="" style="width:70%">
+            <img src="${
+              CONFIG.IMAGE_URL + prod.image
+            }" alt="" style="width:70%">
           </div>
           <h4>${prod.product_name}</h4>
           <p>${prod.category}</p>
