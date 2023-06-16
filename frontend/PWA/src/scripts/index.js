@@ -1,22 +1,26 @@
-import 'regenerator-runtime';
-import '../styles/styles.css';
-import '../styles/cart.css';
-import '../styles/profile.css';
-import '../styles/aboutUs.css';
-import '../styles/responsive.css';
-import App from './views/app';
+import "regenerator-runtime";
+import "./component/headernav.js";
+import "./component/footerapp.js";
+import "../styles/styles.css";
+import "../styles/cart.css";
+import "../styles/profile.css";
+import "../styles/aboutUs.css";
+import "../styles/responsive.css";
+import App from "./views/app";
+
+const headerUp = document.querySelector("header-nav");
+
+headerUp.mainContent = document.querySelector("#mainContent");
 
 // eslint-disable-next-line no-unused-vars
 const app = new App({
-  button: document.querySelector('#hamburgerButton'),
-  drawer: document.querySelector('#navigationDrawer'),
-  content: document.querySelector('#mainContent'),
+  content: document.querySelector("#mainContent"),
 });
 
-window.addEventListener('hashchange', () => {
+window.addEventListener("hashchange", () => {
   app.renderPage();
 });
 
-window.addEventListener('load', () => {
+window.addEventListener("load", () => {
   app.renderPage();
 });

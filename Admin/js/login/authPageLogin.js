@@ -1,8 +1,8 @@
 import Token from "../utils/searchToken.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(Token.searchToken());
-  if (Token.searchToken()) {
+  const token = localStorage.getItem("token");
+  if (token) {
     window.location.href = "index.html";
   }
 });

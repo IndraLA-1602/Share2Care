@@ -1,5 +1,6 @@
 const Token = {
   searchToken() {
+    console.log(document.cookie);
     const cookies = document.cookie.split(";"); // Memisahkan string cookie menjadi array cookie yang terpisah
 
     let tokenValue = null;
