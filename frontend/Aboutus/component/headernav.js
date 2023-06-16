@@ -20,18 +20,30 @@ class HeaderNav extends HTMLElement {
         <img class="logo" src="./image/Share2Care_logos.png" alt="" /></div>
         <nav>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Product</a></li>
-            <li><a href="#">Testimoni</a></li>
-            <li><a href="#">About Us</a></li>
+            <li><a class="menu" href="#">Home</a></li>
+            <li><a class="menu" href="#">Product</a></li>
+            <li><a class="menu" href="#">Testimoni</a></li>
+            <li><a class="menu" href="#">About Us</a></li>
           </ul>
           <div class="container-nav">
             <img src="./image/shopping-cart.png" alt="" />
-            <img src="./image/avatar.png" alt="" />
+            <div class="dropdown">
+            <img id="profile" src="./image/avatar.png" alt="" />
+              <ul id="drop">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Logout</a></li>
+              </ul>
+            </div>
           </div>
         </nav>
     </div>
     `;
+    const profile = this._shadowRoot.querySelector("#profile");
+    const drop = this._shadowRoot.querySelector("#drop");
+
+    profile.addEventListener("click", () => {
+      drop.classList.toggle("show");
+    });
   }
 }
 
