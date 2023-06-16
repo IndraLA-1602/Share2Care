@@ -17,7 +17,7 @@ return new class extends Migration
             $table->text('alamat');
             $table->text('desc');
             $table->string('image');
-            $table->string('province');
+            $table->string('city');
             $table->timestamps();
         });
     }
