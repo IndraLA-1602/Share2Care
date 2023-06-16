@@ -1,6 +1,7 @@
 import 'regenerator-runtime';
 import '../styles/styles.css';
 import '../styles/cart.css';
+import '../styles/profile.css';
 import '../styles/aboutUs.css';
 import '../styles/responsive.css';
 import App from './views/app';
