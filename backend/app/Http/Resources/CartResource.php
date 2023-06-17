@@ -18,7 +18,7 @@ class CartResource extends JsonResource
             'user' => $this->user->name,
             'qty' => $this->qty,
             'total' => $this->total,
-            'products' => $this->product,
+            'products' => ProductResource::make($this->product),
             'created_at' => $this->created_at,
             'updated_at' => $this->updated_at,
         ];

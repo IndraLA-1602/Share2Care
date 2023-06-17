@@ -1,7 +1,7 @@
 .Cart {
   padding: 3rem var(--padd-horizontal) var(--padd-vertical)
     var(--padd-horizontal);
-  font-family: "Quicksand", sans-serif;
+  font-family: 'Quicksand', sans-serif;
   background: var(--gradient);
   min-height: 100vh;
   display: flex;
@@ -39,20 +39,24 @@
   background-color: white;
   padding: 20px;
   border-radius: 20px;
+  margin-bottom: 10px;
 }
 
 .Cart_produk {
   display: grid;
   grid-template-columns: 1fr 2fr;
   padding: 0px 50px;
+  gap: 35px;
 }
 
 .Cart_img {
-  padding: 70px;
-  background-image: url("../public/indomie.jpg");
+  /* padding: 70px;
+  background-image: url('../public/indomie.jpg');
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100%;
+  background-size: 100%; */
+  width: 100%;
+  margin: auto 0;
 }
 
 .Cart_detail h4 {
