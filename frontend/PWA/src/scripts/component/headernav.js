@@ -5,7 +5,9 @@ import DrawerInitiator from "../utils/drawer-initiator.js";
 class HeaderNav extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: "open" });
+    this._shadowRoot = this.attachShadow({
+      mode: "open",
+    });
     const link = document.createElement("link");
     link.setAttribute("rel", "stylesheet");
     link.setAttribute(
@@ -22,7 +24,7 @@ class HeaderNav extends HTMLElement {
 
   connectedCallback() {}
   render() {
-    this._shadowRoot.innerHTML += `
+    this._shadowRoot.innerHTML += /*html */ `
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -42,21 +44,33 @@ class HeaderNav extends HTMLElement {
             <li><a class="menu" href="#/about-us">About Us</a></li>
           </ul>
           <div class="container-nav">
-            <div>
             <a href="#/cart">
-                <i class="button-icon fas fa-shopping-cart"></i></a>
-              <i id="profile" class="button-icon fas fa-user"></i>
-              </div>
-              <div class="dropdown">
-              <ul id="drop" class="hidden hide">
-                <li><a href="#/profile">Profile</a></li>
-                <li><a href="#">Logout</a></li>
-              </ul>
-            </div>
+              <i class="button-icon fas fa-shopping-cart"></i>
+            </a>
+
+
+            <a href="#/login" id="login-btn">Login</a>
+           
           </div>
         </nav>
     </div>
     `;
+
+    // condition locastorage
+    const loginBtn = this._shadowRoot.querySelector("#login-btn");
+
+    if (localStorage.getItem("token")) {
+      const dropdown = document.createElement("span");
+      dropdown.innerHTML = /*html */ `<i id="profile" class="button-icon fas fa-user"></i>
+      <div class="dropdown">
+      <ul id="drop" class="hidden hide">
+        <li><a href="#/profile">Profile</a></li>
+        <li><a href="#">Logout</a></li>
+      </ul>
+    </div>`;
+      loginBtn.replaceWith(dropdown);
+    }
+
     const profile = this._shadowRoot.querySelector("#profile");
     const drop = this._shadowRoot.querySelector("#drop");
     const logo = this._shadowRoot.querySelector(".logo");
