@@ -28,6 +28,8 @@
   },
   "dependencies": {
     "axios": "^1.4.0",
+    "jquery": "^3.7.0",
+    "noty": "^3.2.0-beta-deprecated",
     "regenerator-runtime": "^0.13.11"
   }
 }
