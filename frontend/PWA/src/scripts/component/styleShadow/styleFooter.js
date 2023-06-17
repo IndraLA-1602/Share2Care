@@ -1,7 +1,9 @@
 const styleFooterApp = `
+
   footer {
     background: var(--gradient);
     padding: 4rem var(--padd-horizontal);
+    color: var(--white-smoke);
   }
   
   .footer-atas {
@@ -45,6 +47,8 @@ const styleFooterApp = `
     border: none;
     padding: 0.5rem 0.5rem;
     border-radius: 2rem;
+    min-height: 44px;
+    min-width: 44px;
   }
   
   .sosmed button:hover {

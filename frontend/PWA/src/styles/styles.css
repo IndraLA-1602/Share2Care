@@ -1,3 +1,39 @@
+/* pengaturan umum */
+
+:root {
+  --rust: #b03e21ff;
+  --cinnabar: #e35c3bff;
+  --sandy-brown: #f4a261ff;
+  --saffron: #e9c46aff;
+  --battleship-gray: #898989ff;
+  --white-smoke: #f5f5f5ff;
+  --padd-horizontal: 7rem;
+  --padd-vertical: 6rem;
+  --gradient: linear-gradient(
+    90deg,
+    rgba(227, 92, 59, 1) 0%,
+    rgba(244, 162, 97, 1) 100%
+  );
+  --title-weight: 600;
+  /* desktor size */
+  --title-size: 1.7rem;
+  --subtitle-size: 1.5rem;
+  --text-size: 1.2rem;
+  --logo-size: 3rem;
+  --other-img: 2.5rem;
+
+  --padd-horizontal: 7rem;
+  --padd-vertical: 6rem;
+  /* mobile size */
+  --title-size-mobile: 1.3rem;
+  --text-size-mobile: 1rem;
+  --logo-size-mobile: 2.3rem;
+  --other-img-mobile: 1.9rem;
+
+  --padd-horizontal-mobile: 2.3rem;
+  --padd-vertical-mobile: 5rem;
+}
+
 * {
   padding: 0;
   margin: 0;

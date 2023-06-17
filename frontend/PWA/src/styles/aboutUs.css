@@ -1,159 +1,120 @@
-/* pengaturan umum */
-
-:root {
-  --rust: #b03e21ff;
-  --cinnabar: #e35c3bff;
-  --sandy-brown: #f4a261ff;
-  --saffron: #e9c46aff;
-  --battleship-gray: #898989ff;
-  --white-smoke: #f5f5f5ff;
-  --padd-horizontal: 7rem;
-  --padd-vertical: 6rem;
-  --gradient: linear-gradient(
-    90deg,
-    rgba(227, 92, 59, 1) 0%,
-    rgba(244, 162, 97, 1) 100%
-  );
-  --title-weight: 600;
-  /* desktor size */
-  --title-size: 1.7rem;
-  --text-size: 1.2rem;
-  --logo-size: 3rem;
-  --other-img: 2.5rem;
-
-  --padd-horizontal: 7rem;
-  --padd-vertical: 6rem;
-  /* mobile size */
-  --title-size-mobile: 1.3rem;
-  --text-size-mobile: 1rem;
-  --logo-size-mobile: 2.3rem;
-  --other-img-mobile: 1.9rem;
-
-  --padd-horizontal-mobile: 2.3rem;
-  --padd-vertical-mobile: 5rem;
-}
 /* Jumbotron */
 header {
-  background: var(--gradient) ;
+  background: var(--gradient);
 }
 .jumbotron_aboutus {
+  display: grid;
+  padding: calc(var(--padd-vertical) * 2) var(--padd-horizontal);
+  grid-template-columns: 7fr 9fr;
+  gap: 2rem 1.5rem;
+  background-image: url("https://m0p8.c14.e2-2.dev/share2care/aboutus/ornamen.png");
+  /* background-color: linear-gradient(45deg, #E35C3B, #F4A261); */
+  background-size: 75% 90%;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  z-index: 1000;
+}
 
-    display: grid;
-    padding: calc(var(--padd-vertical) * 2) var(--padd-horizontal);
-    grid-template-columns: 7fr 9fr;
-    gap: 2rem 1.5rem;
-    background-image: url("https://m0p8.c14.e2-2.dev/share2care/aboutus/ornamen.png");
-    /* background-color: linear-gradient(45deg, #E35C3B, #F4A261); */
-    background-size: 75% 90%;
-    background-repeat: no-repeat;
-    background-position: right bottom;
-    z-index: 1000;
-  }
-  
-  .jumbotron-logo {
-    background: url("../public/share2Care.png");
-    background-repeat: no-repeat;
-    padding-top: 30px;
-    /* padding-left: 200px; */
-    grid-column: 1 / span 2;
-  }
-  
-  .judul h1 {
-    font-size: var(--title-size);
-    font-weight: var(--title-weight);
-    color: white;
-  }
+.jumbotron-logo {
+  background: url("../public/share2Care.png");
+  background-repeat: no-repeat;
+  padding-top: 30px;
+  /* padding-left: 200px; */
+  grid-column: 1 / span 2;
+}
 
-  .desc p {
-    color: white;
-  }
-  
-  /* section misi kami */
-  
-  .misi {
-    background-color: var(--white-smoke);
-    color: var(--battleship-gray);
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-between;
-    width: 100%;
-    padding: var(--padd-vertical) var(--padd-horizontal);
-    gap: 2rem;
-  }
-  
-  .misi h2 {
-    display: block;
-    width: 25%;
-    font-size: var(--title-size);
-    font-weight: var(--title-weight);
-    font-weight: 700;
-    color: var(--rust);
-  }
-  
-  .misi p {
-    width: 60%;
-  }
-  
-  /* SECTION KAMI */
-  
-  .kami {
-    background: var(--gradient);
-    padding: var(--padd-vertical) var(--padd-horizontal);
-    text-align: center;
-  }
-  
-  .kami h2 {
-    font-size: var(--title-size);
-    font-weight: var(--title-weight);
-  }
-  
-  .anggota {
-    padding: 5rem 4rem;
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-  }
-  
-  .user {
-    display: flex;
-    margin: 1.7rem 3rem;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--white-smoke);
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
-    width: 6rem;
-    height: 6rem;
-    border-radius: 50%;
-    margin-bottom: 1.5rem;
-  }
-  
-  .user img {
-    height: auto;
-    width: 40px;
-  }
-  
-  .kami h3 {
-    font-size: 1.2rem;
-  }
-  
-   
-  /*
+.judul h1 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  color: white;
+}
+
+.desc p {
+  color: white;
+}
+
+/* section misi kami */
+
+.misi {
+  background-color: var(--white-smoke);
+  color: var(--battleship-gray);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  width: 100%;
+  padding: var(--padd-vertical) var(--padd-horizontal);
+  gap: 2rem;
+}
+
+.misi h2 {
+  display: block;
+  width: 25%;
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+  font-weight: 700;
+  color: var(--rust);
+}
+
+.misi p {
+  width: 60%;
+}
+
+/* SECTION KAMI */
+
+.kami {
+  background: var(--gradient);
+  padding: var(--padd-vertical) var(--padd-horizontal);
+  text-align: center;
+}
+
+.kami h2 {
+  font-size: var(--title-size);
+  font-weight: var(--title-weight);
+}
+
+.anggota {
+  padding: 5rem 4rem;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.user {
+  display: flex;
+  margin: 1.7rem 3rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-smoke);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  margin-bottom: 1.5rem;
+}
+
+.user img {
+  height: auto;
+  width: 40px;
+}
+
+.kami h3 {
+  font-size: 1.2rem;
+}
+
+/*
     Main Content
   */
-   
-  main {
 
-    flex: 1;
-  }
-   
-  .content {
-    margin: 0 auto;
-    min-height: 100%;
-  }
-   
-  .content .content__heading {
-    font-weight: normal;
-  }
-   
-  
+main {
+  flex: 1;
+}
+
+.content {
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.content .content__heading {
+  font-weight: normal;
+}

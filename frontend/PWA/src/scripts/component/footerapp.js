@@ -18,28 +18,28 @@ class FooterApp extends HTMLElement {
     <footer>
     <div class="footer-atas">
         <div class="footer-desc">
-          <img class="logo" src="./image/Share2Care_logos.png" alt="" />
+          <img class="logo" src="./share2Care.png" alt="" />
           <p>
-            "Terima kasih telah menjadi bagian dari Share2Care, platform
+            Terima kasih telah menjadi bagian dari Share2Care, platform
             marketplace donasi yang memberi arti pada kepedulian. Bersama, kita
-            mewujutkan perubahan positif bagi mereka yang membutuhkan"
+            mewujutkan perubahan positif bagi mereka yang membutuhkan
           </p>
         </div>
         <div class="sosmed">
           <button>
-            <img src="./image/instagram.png" alt="" />
+            <img src="./instagram.png" alt="" />
             <p>Instagram</p>
           </button>
           <button>
-            <img src="./image/facebook.png" alt="" />
+            <img src="./facebook.png" alt="" />
             <p>Facebook</p>
           </button>
           <button>
-            <img src="./image/whatsapp.png" alt="" />
+            <img src="./whatsapp.png" alt="" />
             <p>Whatsapp</p>
           </button>
           <button>
-            <img src="./image/envelope.png" alt="" />
+            <img src="./envelope.png" alt="" />
             <p>Email</p>
           </button>
         </div>
