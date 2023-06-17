@@ -151,34 +151,38 @@ body {
 /* Jumbotron */
 
 .jumbotron {
-  background: linear-gradient(45deg, #e35c3b, #f4a261);
-  height: 450px;
+  background: var(--gradient);
+  /* height: 450px; */
 }
 
 .hero {
   display: flex;
-  align-items: center;
-  min-height: 380px;
-  width: 100%;
-  text-align: left;
+  padding: var(--padd-vertical) var(--padd-horizontal) var(--padd-vertical)
+    var(--padd-horizontal);
+  /* align-items: center; */
+  /* min-height: 380px; */
+  /* width: 100%; */
+  /* text-align: left; */
   background-image: url("../public/ornamen.png");
-  background-size: 600px;
+  /* background-size: 600px; */
+  background-size: 70% 90%;
   background-repeat: no-repeat;
   background-position: right bottom;
-  height: 450px;
+  /* height: 450px; */
 }
 
 .hero__inner {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   max-width: 800px;
-  margin-left: 60px;
+  /* margin-left: 60px; */
   line-height: 1, 2;
 }
 
 .hero__title {
   color: #fff;
   font-weight: 500;
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: var(--title-size);
   text-align: left;
   font-weight: bold;
   opacity: 0;
@@ -200,6 +204,7 @@ body {
   color: #fff;
   margin-top: 30px;
   font-size: 28px;
+  font-size: var(--subtitle-size);
   font-weight: 300;
   margin-bottom: 30px;
   list-style-type: none;
@@ -215,7 +220,8 @@ body {
   text-decoration: none;
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: var(--text-size);
   transition: background-color 0.3s ease;
 }
 
@@ -312,21 +318,23 @@ footer {
 
 /*Campaign*/
 .campaign {
-  padding: 100px 150px 50px 150px;
+  padding: var(--padd-vertical) var(--padd-horizontal);
   background-color: white;
 }
 
 .campaign p {
   text-align: center;
   color: #f4a261;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: var(--subtitle-size);
   font-weight: bold;
 }
 
 .campaign h1 {
   text-align: center;
   color: #b03e21;
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: var(--title-size);
   font-weight: bold;
 }
 
@@ -365,14 +373,16 @@ footer {
 
 /*Fitur Unggulan*/
 .fitur {
-  padding: 100px 50px 100px 50px;
+  /* padding: 100px 50px 100px 50px; */
+  padding: var(--padd-vertical) var(--padd-horizontal);
   background-color: white;
 }
 
 .fitur h1 {
   text-align: center;
   color: #b03e21;
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: var(--title-size);
   font-weight: bold;
 }
 
@@ -394,7 +404,7 @@ footer {
   background-image: url("../public/fitur.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 50%;
+  background-size: 65%;
 }
 
 .Text_Fitur {
@@ -403,19 +413,22 @@ footer {
 
 .Text_Fitur h2 {
   color: #e35c3b;
-  font-size: 24px;
+  /* font-size: 24px; */
+  font-size: var(--subtitle-size);
   font-weight: bold;
 }
 
 .Text_Fitur p {
   color: gray;
-  font-size: 18px;
+  /* font-size: 18px; */
+  font-size: var(--text-size);
   font-weight: bold;
 }
 
 /*Donasi*/
 .donasi {
-  padding: 100px;
+  /* padding: 100px; */
+  padding: var(--padd-vertical) var(--padd-horizontal);
   background-color: white;
 }
 
@@ -423,13 +436,15 @@ footer {
   text-align: left;
   color: #f4a261;
   font-size: 20px;
+  font-size: var(--subtitle-size);
   font-weight: bold;
 }
 
 .donasi h1 {
   text-align: left;
   color: #b03e21;
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: var(--title-size);
   font-weight: bold;
 }
 
@@ -501,21 +516,24 @@ footer {
 
 /*Ulasan*/
 .ulasan {
-  padding: 100px 250px 100px 250px;
+  /* padding: 100px 250px 100px 250px; */
+  padding: var(--padd-vertical) var(--padd-horizontal);
   background-color: white;
 }
 
 .ulasan p {
   text-align: center;
   color: #f4a261;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: var(--subtitle-size);
   font-weight: bold;
 }
 
 .ulasan h1 {
   text-align: center;
   color: #b03e21;
-  font-size: 35px;
+  /* font-size: 35px; */
+  font-size: var(--title-size);
   font-weight: bold;
   padding-bottom: 30px;
 }
