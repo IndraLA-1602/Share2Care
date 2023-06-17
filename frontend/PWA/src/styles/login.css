@@ -1,0 +1,49 @@
+.container__login {
+  max-width: 650px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 100px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form__group {
+  margin-bottom: 20px;
+}
+
+.form__group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: black;
+}
+
+.form__group input[type='text'],
+.form__group input[type='password'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.form__group button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 90%;
+  }
+}
