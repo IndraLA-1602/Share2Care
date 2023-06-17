@@ -49,7 +49,8 @@ Route::middleware('auth:users')->group(function (){
         return "User";
     });
     Route::resource('cart', CartController::class);
-    Route::get('/test', [TransactionController::class, 'index']);
+    Route::post('/payment', [TransactionController::class, 'index']);
+    Route::post('/payment/success', [TransactionController::class, 'store']);
 });
 
 Route::get('product', [ProductController::class, 'index']);

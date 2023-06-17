@@ -1,4 +1,4 @@
-import CONFIG from '../../../globals/config';
+import CONFIG from "../../../globals/config";
 
 const createProductList = (product) => `
     <div class="Card_Donasi">
@@ -16,7 +16,9 @@ const createProductList = (product) => `
             <button class="button_card" id="cart" data-product=${
               product.id
             }>Masukan Keranjang</button>
-            <button class="button_card">Beli</button>
+            <button class="button_card" id="beli" data-checkout=${
+              product.id
+            }>Beli</button>
           </div>
         </div>
     </div>
@@ -62,7 +64,9 @@ const createCartList = (cart) => `
       <h4>Rp ${cart.products.price}</h4>
     </div>
     <div class="Cart_donasi">
-      <button>Donasikan</button>
+      <button data-checkout=${cart.products.id} data-cart=${
+  cart.id
+}>Donasikan</button>
     </div>
   </div>
 `;

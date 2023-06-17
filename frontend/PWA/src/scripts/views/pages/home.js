@@ -1,9 +1,11 @@
 import Campaign from "../../../data/campaignSource";
+import $ from "jquery";
 import Product from "../../../data/productsSource";
 import {
   createCampaignList,
   createProductList,
 } from "../templates/template-creator";
+import Payment from "../../../data/paymentSource";
 
 const Home = {
   async render() {
@@ -127,6 +129,15 @@ const Home = {
       element.addEventListener("click", (e) => {
         Product.addToCart(product);
       });
+    });
+
+    // Payment
+    $("[data-checkout]").on("click", function (e) {
+      let self = $(this);
+      const $prodId = self.data("checkout");
+      let payment = new Payment($prodId);
+      // payment.getSnapKey();
+      payment.pay();
     });
   },
 };

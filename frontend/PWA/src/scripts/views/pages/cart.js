@@ -1,6 +1,8 @@
-import CartSource from '../../../data/cartSource';
-import redirect from '../../component/utils/redirect';
-import { createCartList } from '../templates/template-creator';
+import CartSource from "../../../data/cartSource";
+import Payment from "../../../data/paymentSource";
+import redirect from "../../component/utils/redirect";
+import { createCartList } from "../templates/template-creator";
+import $ from "jquery";
 
 const Cart = {
   async render() {
@@ -22,15 +24,24 @@ const Cart = {
   },
 
   async afterRender() {
-    const $cartContainer = document.querySelector('.Cart_card_padding');
-    if (localStorage.getItem('token')) {
+    const $cartContainer = document.querySelector(".Cart_card_padding");
+    if (localStorage.getItem("token")) {
       const $cartList = await CartSource.listCart();
       const $cartData = await $cartList.data;
       $cartData.forEach((data) => {
         $cartContainer.innerHTML += createCartList(data);
       });
+
+      $("[data-checkout]").on("click", function (e) {
+        let self = $(this);
+        const $prodId = self.data("checkout");
+        const $cartId = self.data("cart");
+        let payment = new Payment($prodId, $cartId);
+        // payment.getSnapKey();
+        payment.pay();
+      });
     } else {
-      redirect('/login');
+      redirect("/login");
     }
   },
 };

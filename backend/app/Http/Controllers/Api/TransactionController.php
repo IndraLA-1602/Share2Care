@@ -3,16 +3,26 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
+use App\Models\Cart;
+use App\Models\Order;
+use App\Models\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Response;
 
 class TransactionController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         $user = Auth::user();
-        // dd($user);
+        $product = Product::find($request->prodId);
+        $order = Order::create([
+            "user_id" => $user->id,
+            "product_id" => $product->id,
+            "amount" => $product->price,
+            "status" => "pending",
+        ]);
+
         \Midtrans\Config::$serverKey = 'SB-Mid-server-_QLRrgV4QCQc-hdbh1uEeQyZ';
         // Set to Development/Sandbox Environment (default). Set to true for Production Environment (accept real transaction).
         \Midtrans\Config::$isProduction = false;
@@ -23,8 +33,8 @@ class TransactionController extends Controller
 
         $params = array(
             'transaction_details' => array(
-                'order_id' => rand(),
-                'gross_amount' => 10000,
+                'order_id' => $order->id,
+                'gross_amount' => $order->amount,
             ),
             'customer_details' => array(
                 'first_name' => $user ? $user->name : "test",
@@ -34,7 +44,19 @@ class TransactionController extends Controller
         );
 
         $snapToken = \Midtrans\Snap::getSnapToken($params);
-        // dd($snapToken);
         return Response::json(['client_key' => $snapToken]);
+    }
+
+    public function store(Request $request)
+    {
+        $order = Order::find($request->order_id);
+        $order->status = "success";
+        $order->save();
+
+        if($request->has('cart_id')){
+            $cart = Cart::destroy($request->cart_id);
+            return $this->sendResponse('Success', 'Data berhasil di checkout', $order);
+        }
+        return $this->sendResponse('Success', 'Data berhasi di order', $order);
     }
 }
