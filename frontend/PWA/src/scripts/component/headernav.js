@@ -1,18 +1,18 @@
-import styleCommon from "./styleShadow/styleCommon.js";
-import styleHeaderNav from "./styleShadow/styleHeaderNav.js";
-import DrawerInitiator from "../utils/drawer-initiator.js";
+import styleCommon from './styleShadow/styleCommon.js';
+import styleHeaderNav from './styleShadow/styleHeaderNav.js';
+import DrawerInitiator from '../utils/drawer-initiator.js';
 
 class HeaderNav extends HTMLElement {
   constructor() {
     super();
     this._shadowRoot = this.attachShadow({
-      mode: "open",
+      mode: 'open',
     });
-    const link = document.createElement("link");
-    link.setAttribute("rel", "stylesheet");
+    const link = document.createElement('link');
+    link.setAttribute('rel', 'stylesheet');
     link.setAttribute(
-      "href",
-      "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      'href',
+      'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css'
     );
     this._shadowRoot.appendChild(link);
   }
@@ -57,10 +57,10 @@ class HeaderNav extends HTMLElement {
     `;
 
     // condition locastorage
-    const loginBtn = this._shadowRoot.querySelector("#login-btn");
+    const loginBtn = this._shadowRoot.querySelector('#login-btn');
 
-    if (localStorage.getItem("token")) {
-      const dropdown = document.createElement("span");
+    if (localStorage.getItem('token')) {
+      const dropdown = document.createElement('span');
       dropdown.innerHTML = /*html */ `<i id="profile" class="button-icon fas fa-user"></i>
       <div class="dropdown">
       <ul id="drop" class="hidden hide">
@@ -71,23 +71,23 @@ class HeaderNav extends HTMLElement {
       loginBtn.replaceWith(dropdown);
     }
 
-    const profile = this._shadowRoot.querySelector("#profile");
-    const drop = this._shadowRoot.querySelector("#drop");
-    const logo = this._shadowRoot.querySelector(".logo");
-    this._button = this._shadowRoot.querySelector("#hamburgerButton");
+    const profile = this._shadowRoot.querySelector('#profile');
+    const drop = this._shadowRoot.querySelector('#drop');
+    const logo = this._shadowRoot.querySelector('.logo');
+    this._button = this._shadowRoot.querySelector('#hamburgerButton');
 
-    this._drawer = this._shadowRoot.querySelector("#navigationDrawer");
+    this._drawer = this._shadowRoot.querySelector('#navigationDrawer');
 
-    logo.addEventListener("click", () => {
-      window.location.href = "#/home";
+    logo.addEventListener('click', () => {
+      window.location.href = '#/home';
     });
 
     const setDisplayNone = () => {
-      drop.classList.toggle("hide");
+      drop.classList.toggle('hide');
     };
 
-    profile.addEventListener("click", () => {
-      drop.classList.toggle("hidden");
+    profile.addEventListener('click', () => {
+      drop.classList.toggle('hidden');
       setTimeout(setDisplayNone, 300);
     });
 
@@ -99,4 +99,4 @@ class HeaderNav extends HTMLElement {
   }
 }
 
-customElements.define("header-nav", HeaderNav);
+customElements.define('header-nav', HeaderNav);
