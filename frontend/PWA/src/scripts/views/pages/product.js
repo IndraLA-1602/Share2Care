@@ -4,7 +4,7 @@ import { createProductList } from "../templates/template-creator";
 const ProductPage = {
   async render() {
     return `
-    <div class="donasi">
+    <div class="productPage donasi">
         <h1>Product Donasi Share2Care</h1>
         <div class="Donasi_list">
         
