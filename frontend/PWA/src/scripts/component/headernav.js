@@ -68,28 +68,34 @@ class HeaderNav extends HTMLElement {
         <li><a href="#">Logout</a></li>
       </ul>
     </div>`;
+
+      const profile = dropdown.querySelector("#profile");
+      const drop = dropdown.querySelector("#drop");
+
+      const setDisplayNone = () => {
+        drop.classList.toggle("hide");
+      };
+
+      profile.addEventListener("click", () => {
+        drop.classList.toggle("hidden");
+        setTimeout(setDisplayNone, 300);
+      });
+
       loginBtn.replaceWith(dropdown);
     }
 
-    const profile = this._shadowRoot.querySelector("#profile");
-    const drop = this._shadowRoot.querySelector("#drop");
     const logo = this._shadowRoot.querySelector(".logo");
-    this._button = this._shadowRoot.querySelector("#hamburgerButton");
 
+    this._button = this._shadowRoot.querySelector("#hamburgerButton");
     this._drawer = this._shadowRoot.querySelector("#navigationDrawer");
 
     logo.addEventListener("click", () => {
       window.location.href = "#/home";
     });
 
-    const setDisplayNone = () => {
-      drop.classList.toggle("hide");
-    };
-
-    profile.addEventListener("click", () => {
-      drop.classList.toggle("hidden");
-      setTimeout(setDisplayNone, 300);
-    });
+    // this._content.addEventListener("click", () => {
+    // drop.classList.add("hidden");
+    // });
 
     DrawerInitiator.init({
       button: this._button,
