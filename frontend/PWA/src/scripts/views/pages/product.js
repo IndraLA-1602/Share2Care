@@ -24,6 +24,8 @@ const ProductPage = {
     const products = await Product.listHome();
     const product = products.data;
 
+    const productContainer = document.querySelector(".Donasi_list");
+
     product.forEach((prod) => {
       productContainer.innerHTML += createProductList(prod);
     });

@@ -5,6 +5,7 @@ import Profile from "../views/pages/profile";
 import Login from "../views/pages/login";
 import Register from "../views/pages/register";
 import ProductPage from "../views/pages/product";
+import Testimoni from "../views/pages/testimoni";
 
 const routes = {
   "/": Home,
@@ -15,6 +16,7 @@ const routes = {
   "/login": Login,
   "/register": Register,
   "/product": ProductPage,
+  "/testimoni": Testimoni,
 };
 
 export default routes;
