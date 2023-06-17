@@ -1,0 +1,61 @@
+.testimoni {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--gradient);
+  padding: 2rem var(--padd-horizontal) var(--padd-vertical)
+    var(--padd-horizontal);
+}
+
+.judul {
+  text-align: center;
+  color: white;
+  width: 60%;
+}
+
+.judul h1 {
+  font-size: var(--title-size);
+}
+
+.judul p {
+  font-size: var(--text-size);
+  text-align: center;
+}
+
+.listTestimoni {
+  display: flex;
+  margin-top: 3rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.listTestimoni .card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 2rem;
+  width: 310px;
+  height: 310px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.listTestimoni .card img {
+  width: 30%;
+  margin: 2rem;
+}
+
+.listTestimoni .card p {
+  margin: 0;
+  padding: 0;
+  color: var(--sandy-brown);
+  text-align: center;
+  font-size: var(--text-size);
+}
+
+.listTestimoni .card h3 {
+  color: var(--rust);
+  margin: 1rem 0;
+}
