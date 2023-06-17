@@ -1,7 +1,6 @@
 const AboutUs = {
   async render() {
-    /** html */
-    return html`
+    return /* html */ `
       <header>
         <div class="jumbotron_aboutus">
           <div class="jumbotron-logo">

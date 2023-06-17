@@ -1,6 +1,6 @@
 const Cart = {
   async render() {
-    return `
+    return /*html */ `
       <div class="Cart">
         <h2>Keranjang Donasi</h2>
         <div class="Cart_padding">

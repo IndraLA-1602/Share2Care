@@ -36,7 +36,7 @@ const Login = {
       const $email = $("[name=email]").val();
 
       // send register
-      await HttpSend({
+      HttpSend({
         path: "/user/login",
         method: "POST",
         data: {
@@ -44,13 +44,15 @@ const Login = {
           email: $email,
         },
       })
-        .catch((err) => {
-          toast("Username dan password salah", "alert");
-        })
         .then((res) => {
           if (res) localStorage.setItem("token", res?.token);
 
           redirect("/");
+
+          window.location.reload();
+        })
+        .catch((err) => {
+          toast("Username dan password salah", "error");
         });
     });
   },
