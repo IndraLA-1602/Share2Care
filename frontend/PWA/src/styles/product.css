@@ -1,0 +1,39 @@
+.donasi {
+  padding-top: 2.5rem;
+}
+
+.category {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+}
+
+.category ul {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.category li {
+  border-radius: 5rem;
+  padding: 0.5rem 3rem;
+  background-color: var(--sandy-brown);
+}
+
+.category a {
+  text-decoration: none;
+  font-size: var(--subtitle-size);
+  font-weight: bold;
+  color: white;
+}
+
+.category li:hover {
+  background-color: var(--rust);
+}
