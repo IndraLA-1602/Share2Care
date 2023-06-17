@@ -82,6 +82,18 @@ class HeaderNav extends HTMLElement {
       });
 
       loginBtn.replaceWith(dropdown);
+
+      const profile = this._shadowRoot.querySelector("#profile");
+      const drop = this._shadowRoot.querySelector("#drop");
+
+      const setDisplayNone = () => {
+        drop.classList.toggle("hide");
+      };
+
+      profile.addEventListener("click", () => {
+        drop.classList.toggle("hidden");
+        setTimeout(setDisplayNone, 300);
+      });
     }
 
     const logo = this._shadowRoot.querySelector('.logo');
@@ -93,10 +105,13 @@ class HeaderNav extends HTMLElement {
       window.location.href = '#/home';
     });
 
+<<<<<<< HEAD
     // this._content.addEventListener("click", () => {
     // drop.classList.add("hidden");
     // });
 
+=======
+>>>>>>> e5438ed (add navbar error fixing)
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,

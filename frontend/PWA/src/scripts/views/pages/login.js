@@ -45,7 +45,7 @@ const Login = {
         },
       })
         .catch((err) => {
-          toast("Username dan password salah", "alert");
+          return toast("Username dan password salah", "alert");
         })
         .then((res) => {
           if (res) localStorage.setItem("token", res?.token);
