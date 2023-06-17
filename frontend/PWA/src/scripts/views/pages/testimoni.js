@@ -8,32 +8,32 @@ const Testimoni = {
             </div>
             <div class="listTestimoni">
                 <div class="card">
-                    <img src="./fitur.png" alt="">
+                    <img src="./user.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam. Sed vitae eros vitae nisl aliquam</p>
                     <h3>John Doe</h3>
                 </div>
                 <div class="card">
-                    <img src="./fitur.png" alt="">
+                    <img src="./user.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam. Sed vitae eros vitae nisl aliquam</p>
                     <h3>John Doe</h3>
                 </div>
                 <div class="card">
-                    <img src="./fitur.png" alt="">
+                    <img src="./user.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam. Sed vitae eros vitae nisl aliquam</p>
                     <h3>John Doe</h3>
                 </div>
                 <div class="card">
-                    <img src="./fitur.png" alt="">
+                    <img src="./user.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam. Sed vitae eros vitae nisl aliquam</p>
                     <h3>John Doe</h3>
                 </div>
                 <div class="card">
-                    <img src="./fitur.png" alt="">
+                    <img src="./user.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam. Sed vitae eros vitae nisl aliquam</p>
                     <h3>John Doe</h3>
                 </div>
                 <div class="card">
-                    <img src="./fitur.png" alt="">
+                    <img src="./user.png" alt="">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vitae eros vitae nisl aliquam. Sed vitae eros vitae nisl aliquam</p>
                     <h3>John Doe</h3>
                 </div>
