@@ -1,4 +1,8 @@
-.donasi {
+.productPage {
+  padding-top: 3rem;
+}
+
+/* .donasi {
   padding-top: 2.5rem;
 }
 
@@ -36,4 +40,4 @@
 
 .category li:hover {
   background-color: var(--rust);
-}
+} */

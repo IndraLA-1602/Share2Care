@@ -7,6 +7,12 @@ class Product {
     return resJson;
   }
 
+  static async allList() {
+    const response = await fetch(CONFIG.BASE_URL + "product");
+    const resJson = response.json();
+    return resJson;
+  }
+
   static async addToCart(prodId) {
     const data = {
       product: prodId,

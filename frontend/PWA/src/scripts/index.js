@@ -8,6 +8,7 @@ import "../styles/aboutUs.css";
 import "../styles/login.css";
 import "../styles/product.css";
 import "../styles/responsive.css";
+import "../styles/testimoni.css";
 import "../../node_modules/noty/lib/noty.css";
 import "../../node_modules/noty/lib/themes/metroui.css";
 import App from "./views/app";
