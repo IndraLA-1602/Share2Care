@@ -157,8 +157,7 @@ body {
 
 .hero {
   display: flex;
-  padding: var(--padd-vertical) var(--padd-horizontal) var(--padd-vertical)
-    var(--padd-horizontal);
+  padding: var(--padd-vertical) var(--padd-horizontal);
   /* align-items: center; */
   /* min-height: 380px; */
   /* width: 100%; */
