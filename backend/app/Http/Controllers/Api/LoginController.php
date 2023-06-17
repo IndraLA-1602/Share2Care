@@ -39,7 +39,7 @@ class LoginController extends BaseController
             return $this->sendResponse('Success', 'Login Berhasil', $data);
         }
  
-        return $this->sendResponse('Failed', 'Login Gagal');
+        return $this->errorResponse('Failed', 'Login Gagal', 400);
     }
 
     public function logout()
