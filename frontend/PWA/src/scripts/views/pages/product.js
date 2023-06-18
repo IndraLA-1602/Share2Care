@@ -6,8 +6,8 @@ const ProductPage = {
     return `
     <div class="productPage donasi">
         <h1>Product Donasi Share2Care</h1>
-        <div class="Donasi_list">
-        
+        <div class="product-cards">
+
         </div>
     </div>
     `;
@@ -16,7 +16,7 @@ const ProductPage = {
     const products = await Product.allList();
     const product = products.data;
 
-    const productContainer = document.querySelector(".Donasi_list");
+    const productContainer = document.querySelector(".product-cards");
 
     product.forEach((prod) => {
       productContainer.innerHTML += createProductList(prod);
