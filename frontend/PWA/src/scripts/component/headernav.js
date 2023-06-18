@@ -48,10 +48,7 @@ class HeaderNav extends HTMLElement {
             <a href="#/cart">
               <i class="button-icon fas fa-shopping-cart"></i>
             </a>
-
-
             <a href="#/login" id="login-btn">Login</a>
-           
           </div>
         </nav>
     </div>
