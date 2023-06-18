@@ -19,10 +19,15 @@ const styleHeaderNav = `
     display: none;
   }
   
-  .container-nav div {
+  .container-nav{
     display: flex;
+    flex-direction: row;
     justify-content:center;
-    gap: 1.5rem;
+    gap: 5rem;
+  }
+
+  .container-nav a{
+    display: inline-block;
   }
   
   .logo{
@@ -114,9 +119,24 @@ const styleHeaderNav = `
     width: 100%;
   }
 
+  #login-btn{
+    background-color: var(--sandy-brown);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 2rem;
+    text-decoration: none;
+    border-radius: 1.5rem;
+    font-size: var(--text-size);
+  }
+
+  #login-btn:hover{
+    background-color: var(--cinnabar);
+  }
+
   @media screen and (max-width: 1110px) {
     .container-nav {
-      gap: 1rem;
+      gap: 1.5rem;
     }
   
     nav {
@@ -169,7 +189,7 @@ const styleHeaderNav = `
       top: 100px;
       left: -180px;
       // left:0px;
-      width: 150px;
+      width: 200px;
       transition: all 0.3s;
       padding: 2rem 0;
       overflow: hidden;

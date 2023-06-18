@@ -9,6 +9,7 @@ import "../styles/login.css";
 import "../styles/product.css";
 import "../styles/responsive.css";
 import "../styles/testimoni.css";
+import "../styles/productCard.css";
 import "../../node_modules/noty/lib/noty.css";
 import "../../node_modules/noty/lib/themes/metroui.css";
 import App from "./views/app";
@@ -22,10 +23,26 @@ const app = new App({
   content: document.querySelector("#mainContent"),
 });
 
+function checkTeamCardVisibility() {
+  const productCards = document.querySelectorAll(".product-cards");
+
+  productCards.forEach((card) => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top < window.innerHeight) {
+      card.classList.add("visible");
+    }
+  });
+}
+
+window.addEventListener("scroll", checkTeamCardVisibility);
+window.addEventListener("resize", checkTeamCardVisibility);
+
 window.addEventListener("hashchange", () => {
   app.renderPage();
+  checkTeamCardVisibility();
 });
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   app.renderPage();
+  checkTeamCardVisibility();
 });

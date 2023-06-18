@@ -68,9 +68,7 @@ const Home = {
     <div class="donasi">
       <p>Produk Donasi Kami</p>
       <h1>Donasi Online Mudah dan Bermanfaat di Share2Care</h1>
-      <div class="Donasi_list">
-        
-      </div>
+      <div class="product-cards"></div>
     </div>
 
     <div class="ulasan">
@@ -113,7 +111,7 @@ const Home = {
     const campaignsList = await Campaign.listHome();
     const campaigns = campaignsList.data;
 
-    const productContainer = document.querySelector(".Donasi_list");
+    const productContainer = document.querySelector(".product-cards");
     const campaignContainer = document.querySelector(".Campaign_List");
     product.forEach((prod) => {
       productContainer.innerHTML += createProductList(prod);
