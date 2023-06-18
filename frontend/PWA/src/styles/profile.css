@@ -1,74 +1,74 @@
 .Profile {
-    padding-bottom: 100px ;
-    font-family: 'Quicksand', sans-serif;
-    background: linear-gradient(45deg, #E35C3B, #F4A261);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
- }
+  padding-bottom: 100px;
+  font-family: "Quicksand", sans-serif;
+  background: var(--gradient);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+}
 
- .Profile_padding {
-    padding: 50px 100px;
-  }
+.Profile_padding {
+  padding: 50px 100px;
+}
 
-  .Profile_grid {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-  }
+.Profile_grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+}
 
-  .Profile_img {
-    padding: 70px;
-    background-image: url("../public/user.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-    background-size: 50%;
-  }
+.Profile_img {
+  padding: 70px;
+  background-image: url("../public/user.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: 50%;
+}
 
-  .Profile_detail {
-    padding-left: 50px;
-  }
+.Profile_detail {
+  padding-left: 50px;
+}
 
-  label {
-    color: white;
-    text-align: left;
-    font-size: 32px;
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
+label {
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 
-  p {
-    color: white;
-    text-align: left;
-    font-size: 32px;
-    font-weight: bold;
-    padding-top: 20px;
-    padding-bottom: 10px;
-  }
+p {
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
 
-  input {
-    width: 100%;
-    padding: 12px 20px;
-    margin: 8px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 20px;
-    box-sizing: border-box;
-    font-size: 30px;
-    color:#E35C3B;
-  }
+input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  box-sizing: border-box;
+  font-size: 30px;
+  color: #e35c3b;
+}
 
-  .radio_jenisKelamin {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+.radio_jenisKelamin {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 
-  .Jenis_kelamin {
-    font-size: 24px;
-    font-weight: bold;
-    line-height: 1.1;
-    display: grid;
-    grid-template-columns: 1em auto;
-    gap: 0.5em;
-  }
+.Jenis_kelamin {
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em;
+}
