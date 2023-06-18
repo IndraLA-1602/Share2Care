@@ -38,7 +38,7 @@ const createCartList = (cart) => `
       <div class="Cart_detail">
         <h4>${cart.products.product_name}</h4>
         <p>${cart.products.category}</p>
-        <h4>Rp 5000</h4>
+        <h4>Rp ${cart.products.price}</h4>
       </div>
     </div>
     <div class="Cart_jumlah">

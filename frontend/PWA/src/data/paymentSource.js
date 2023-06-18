@@ -1,5 +1,6 @@
 import CONFIG from "../globals/config";
 import redirect from "../scripts/component/utils/redirect";
+import toast from "../scripts/component/utils/toast";
 
 class Payment {
   $key = "";
@@ -52,10 +53,12 @@ class Payment {
           body: JSON.stringify(data),
         });
         const response = await request.json();
+        toast("Checkout Berhasil", "success");
         redirect("/home");
       },
       onError: function (result) {
         /* You may add your own implementation here */
+        toast("Something Error", "error");
         alert("payment failed!");
         console.log(result);
       },

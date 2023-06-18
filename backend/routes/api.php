@@ -11,6 +11,7 @@ use App\Http\Controllers\Api\RegisterController;
 use App\Http\Controllers\Api\CategoryController;
 use App\Http\Controllers\Api\ProductController;
 use App\Http\Controllers\Api\TransactionController;
+use App\Http\Controllers\Api\UserController;
 use Midtrans\Transaction;
 
 /*
@@ -51,6 +52,7 @@ Route::middleware('auth:users')->group(function (){
     Route::resource('cart', CartController::class);
     Route::post('/payment', [TransactionController::class, 'index']);
     Route::post('/payment/success', [TransactionController::class, 'store']);
+    Route::get('/user/detail', [UserController::class, 'index']);
 });
 
 Route::get('product', [ProductController::class, 'index']);

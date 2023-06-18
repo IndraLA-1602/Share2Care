@@ -1,3 +1,7 @@
+import CONFIG from "../../../globals/config";
+import redirect from "../../component/utils/redirect";
+import $ from "jquery";
+
 const Profile = {
   async render() {
     return `
@@ -10,25 +14,9 @@ const Profile = {
           <div class="Profile_detail">
             <form>
               <label for="nama_user">Nama</label><br>
-              <input type="text" id="nama_user" name="nama_user" placeholder="John Doe"><br>
+              <input type="text" id="nama_user" name="nama_user" value="" placeholder="John Doe"><br>
               <label for="email_user">E-mail</label><br>
-              <input type="text" id="email_user" name="email_user" placeholder="johndoe@gmail.com"><br>
-              <label for="telepon_user">Nomor Telepon</label><br>
-              <input type="text" id="telepon_user" name="telepon_user" placeholder="081231231231"><br>
-              <label for="lahir_user">Tanggal Lahir</label><br>
-              <input type="date" id="lahir_user" name="lahir_user"><br>
-              <p>Jenis Kelamin</p>
-              <div class="radio_jenisKelamin">
-                <label class="Jenis_kelamin">
-                  <input type="radio" name="perempuan" />
-                  Perempuan
-                </label>
-            
-                <label class="Jenis_kelamin">
-                  <input type="radio" name="lakilaki" />
-                    Laki-Laki
-                </label>
-              </div>
+              <input type="text" id="email_user" name="email_user" value="" placeholder="johndoe@gmail.com"><br>
             </form>
           </div>
         </div>
@@ -38,7 +26,21 @@ const Profile = {
   },
 
   async afterRender() {
-    // Fungsi ini akan dipanggil setelah render()
+    const token = localStorage.getItem("token");
+    if (token) {
+      const user = await fetch(CONFIG.BASE_URL + "user/detail", {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+      });
+      const { data } = await user.json();
+      $('input[name="nama_user"]').val(`${data.name}`);
+      $('input[name="email_user"]').val(`${data.email}`);
+    } else {
+      redirect("/login");
+    }
   },
 };
 

@@ -39,6 +39,10 @@
   color: grey;
 }
 
+.side-left p {
+  color: gray;
+}
+
 .titleMission {
   padding-left: 250px;
   padding-right: 200px;
