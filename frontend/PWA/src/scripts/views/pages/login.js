@@ -27,22 +27,22 @@ const Login = {
 
   async afterRender() {
     // Fungsi ini akan dipanggil setelah render()
-    const $login = $('#login');
+    const login = $('#login');
 
     // login form
-    $login.on('submit', async (e) => {
+    login.on('submit', async (e) => {
       e.preventDefault();
 
-      const $password = $('[name=password]').val();
-      const $email = $('[name=email]').val();
+      const password = $('[name=password]').val();
+      const email = $('[name=email]').val();
 
       // send register
       HttpSend({
         path: '/user/login',
         method: 'POST',
         data: {
-          password: $password,
-          email: $email,
+          password: password,
+          email: email,
         },
       })
         .then((res) => {

@@ -10,7 +10,7 @@
         <div class="card bg-primary text-white mb-4">
             <div class="card-body">
                 <div class="card-title">Total Product</div>
-                0
+                {{$product}}
             </div>
         </div>
     </div>
@@ -18,7 +18,7 @@
         <div class="card bg-warning text-white mb-4">
             <div class="card-body">
                 <div class="card-title">Total Campaign</div>
-                0
+                {{$campaign}}
             </div>
         </div>
     </div>
@@ -26,7 +26,7 @@
         <div class="card bg-success text-white mb-4">
             <div class="card-body">
                 <div class="card-title">Total Category</div>
-                0
+                {{$category}}
             </div>
         </div>
     </div>
