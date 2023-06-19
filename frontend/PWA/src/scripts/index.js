@@ -22,37 +22,9 @@ const app = new App({
   content: document.querySelector("#mainContent"),
 });
 
-// function checkTeamCardVisibility() {
-//   const productCards = document.querySelectorAll(".product-cards");
-
-//   productCards.forEach((card) => {
-//     const rect = card.getBoundingClientRect();
-//     if (rect.top < window.innerHeight) {
-//       card.classList.add("visible");
-//     }
-//   });
-// }
-
-// window.addEventListener("scroll", checkTeamCardVisibility);
-// window.addEventListener("resize", checkTeamCardVisibility);
-
 function checkTeamCardVisibility() {
-  const teamCards = document.querySelectorAll(".profile-card");
-  const fiturList = document.querySelectorAll(".Fitur_list");
   const productCards = document.querySelectorAll(".product-cards");
 
-  teamCards.forEach((card) => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      card.classList.add("visible");
-    }
-  });
-  fiturList.forEach((card) => {
-    const rect = card.getBoundingClientRect();
-    if (rect.top < window.innerHeight) {
-      card.classList.add("visible");
-    }
-  });
   productCards.forEach((card) => {
     const rect = card.getBoundingClientRect();
     if (rect.top < window.innerHeight) {
@@ -61,7 +33,7 @@ function checkTeamCardVisibility() {
   });
 }
 
-window.addEventListener("load", () => {
+window.addEventListener("DOMContentLoaded", () => {
   app.renderPage();
   checkTeamCardVisibility();
 });
@@ -71,7 +43,5 @@ window.addEventListener("hashchange", () => {
   checkTeamCardVisibility();
 });
 
-window.addEventListener("DOMContentLoaded", () => {
-  app.renderPage();
-  checkTeamCardVisibility();
-});
+window.addEventListener("scroll", checkTeamCardVisibility);
+window.addEventListener("resize", checkTeamCardVisibility);
