@@ -22,7 +22,7 @@ const styleHeaderNav = `
   .container-nav{
     display: flex;
     flex-direction: row;
-    justify-content:center;
+    margin: 0 auto;
     gap: 5rem;
   }
 
@@ -36,7 +36,7 @@ const styleHeaderNav = `
   
   nav {
     display: flex;
-    align-items: center;
+    // align-items: center;
     gap: 3rem;
   }
   
@@ -85,7 +85,7 @@ const styleHeaderNav = `
     background-color: var(--white-smoke);;
     top: 100%;
     flex-direction: column;
-    transform: translate(-20%, 0.9rem);
+    transform: translate(-55%, 0.9rem);
     gap: 0rem;
     padding: 1rem 0rem;
     border-radius: 0.5rem;

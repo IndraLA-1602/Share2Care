@@ -4,7 +4,6 @@ import "./component/footerapp.js";
 import "../styles/styles.css";
 import "../styles/cart.css";
 import "../styles/profile.css";
-import "../styles/aboutUs.css";
 import "../styles/login.css";
 import "../styles/product.css";
 import "../styles/responsive.css";
