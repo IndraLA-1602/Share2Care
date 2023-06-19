@@ -11,7 +11,7 @@
   --padd-vertical: 6rem;
   --gradient: linear-gradient(
     90deg,
-    rgba(227, 92, 59, 1) 40%,
+    rgba(227, 92, 59, 1) 0%,
     rgba(244, 162, 97, 1) 130%
   );
   --title-weight: 600;
@@ -22,7 +22,7 @@
   --logo-size: 3rem;
   --other-img: 2.5rem;
 
-  --padd-horizontal: 7rem;
+  --padd-horizontal: 3.5rem;
   --padd-vertical: 6rem;
   /* mobile size */
   --title-size-mobile: 1.3rem;
@@ -248,6 +248,7 @@ main {
 /*Campaign*/
 .campaign {
   padding: var(--padd-vertical) var(--padd-horizontal);
+  padding-bottom: 0.5rem;
   background-color: white;
 }
 
@@ -304,6 +305,7 @@ main {
 .fitur {
   /* padding: 100px 50px 100px 50px; */
   padding: var(--padd-vertical) var(--padd-horizontal);
+  /* padding-bottom: 0.5rem; */
   background-color: white;
 }
 
@@ -358,6 +360,7 @@ main {
 .donasi {
   /* padding: 100px; */
   padding: var(--padd-vertical) var(--padd-horizontal);
+  padding-bottom: 0.5rem;
   background-color: white;
 }
 
