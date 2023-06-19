@@ -1,0 +1,3 @@
+jika APP_KEY di file .env masih kosong jalankan command "php artisan key:generate"
+
+ubah FILESYSTEM_DISK di file .env menjadi public agar upload file bisa berjalan
