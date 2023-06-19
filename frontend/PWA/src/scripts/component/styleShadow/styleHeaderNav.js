@@ -187,7 +187,7 @@ const styleHeaderNav = `
       background-color: var(--cinnabar);
       position: absolute;
       top: 100px;
-      left: -180px;
+      left: -210px;
       // left:0px;
       width: 200px;
       transition: all 0.3s;

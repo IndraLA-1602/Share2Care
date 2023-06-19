@@ -2,7 +2,7 @@
 
 :root {
   --rust: #b03e21ff;
-  --cinnabar: #e35c3bff;
+  --cinnabar: rgb(216, 83, 50);
   --sandy-brown: #f4a261ff;
   --saffron: #e9c46aff;
   --battleship-gray: #898989ff;
