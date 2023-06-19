@@ -22,6 +22,16 @@ const app = new App({
   content: document.querySelector("#mainContent"),
 });
 
+window.addEventListener("DOMContentLoaded", () => {
+  app.renderPage();
+  checkTeamCardVisibility();
+});
+
+window.addEventListener("hashchange", () => {
+  app.renderPage();
+  checkTeamCardVisibility();
+});
+
 function checkTeamCardVisibility() {
   const productCards = document.querySelectorAll(".product-cards");
 
@@ -32,16 +42,6 @@ function checkTeamCardVisibility() {
     }
   });
 }
-
-window.addEventListener("DOMContentLoaded", () => {
-  app.renderPage();
-  checkTeamCardVisibility();
-});
-
-window.addEventListener("hashchange", () => {
-  app.renderPage();
-  checkTeamCardVisibility();
-});
 
 window.addEventListener("scroll", checkTeamCardVisibility);
 window.addEventListener("resize", checkTeamCardVisibility);
