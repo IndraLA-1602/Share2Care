@@ -302,25 +302,31 @@ main {
 }
 
 /*Fitur Unggulan*/
-.fitur {
-  /* padding: 100px 50px 100px 50px; */
-  padding: var(--padd-vertical) var(--padd-horizontal);
-  /* padding-bottom: 0.5rem; */
-  background-color: white;
-}
 
-.fitur h1 {
+.fitur h2 {
   text-align: center;
   color: #b03e21;
-  /* font-size: 35px; */
   font-size: var(--title-size);
   font-weight: bold;
 }
 
+.fitur {
+  padding-top: 3rem;
+}
+
 .Fitur_list {
-  padding-top: 50px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-left: 60px;
+  padding-right: 60px;
+  opacity: 1;
+  /* transform: translateY(50px); */
+  transition: opacity 1s ease, transform 2s ease;
+}
+
+.Fitur_list.visible {
+  opacity: 1;
+  transform: none;
 }
 
 .Card_Fitur {
@@ -329,31 +335,43 @@ main {
   grid-template-columns: repeat(2, 1fr);
 }
 
-.Card_img {
-  padding: 20px;
+.Card_img1 {
   display: block;
-  background-image: url("../public/fitur.png");
+  background-image: url("../public/reviews.png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 65%;
+  background-size: 50%;
+}
+.Card_img2 {
+  display: block;
+  background-image: url("../public/choice.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+.Card_img3 {
+  display: block;
+  background-image: url("../public/social.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
 }
 
 .Text_Fitur {
   text-align: left;
+  padding: 20px;
 }
 
-.Text_Fitur h2 {
+.Text_Fitur h3 {
+  text-align: left;
   color: #e35c3b;
-  /* font-size: 24px; */
-  font-size: var(--subtitle-size);
-  font-weight: bold;
+  font-size: 24px;
+  padding-bottom: 10px;
 }
 
 .Text_Fitur p {
   color: gray;
-  /* font-size: 18px; */
-  font-size: var(--text-size);
-  font-weight: bold;
+  font-size: 18px;
 }
 
 /*Donasi*/
@@ -446,60 +464,67 @@ main {
   font-weight: bold;
 }
 
-/*Ulasan*/
-.ulasan {
-  /* padding: 100px 250px 100px 250px; */
-  padding: var(--padd-vertical) var(--padd-horizontal);
-  background-color: white;
+/* ulasan */
+
+.tagline {
+  padding: 60px;
+  padding-bottom: 20px;
 }
 
-.ulasan p {
+.tagline .tagline-campaign {
   text-align: center;
   color: #f4a261;
-  /* font-size: 20px; */
-  font-size: var(--subtitle-size);
-  font-weight: bold;
 }
 
-.ulasan h1 {
+.tagline .subtagline-campaign {
   text-align: center;
   color: #b03e21;
-  /* font-size: 35px; */
-  font-size: var(--title-size);
-  font-weight: bold;
-  padding-bottom: 30px;
-}
-
-.CardUlasan {
-  margin: 20px;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  align-items: center;
+  white-space: pre-line;
   text-align: center;
-  background-color: #fff;
-  border-radius: 25px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.ulasan_image {
-  padding: 15px;
-  display: block;
-  background-image: url("../public/user.png");
-  background-repeat: no-repeat;
-  background-position: top center;
-  background-size: 7%;
+.ulasan-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 60px;
+  align-items: center;
 }
 
-.container_ulasan p {
-  padding: 20px 30px 20px 30px;
-  color: grey;
-  font-size: 15px;
+.ulasan-cards {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 10px;
+  margin-right: 50px;
+}
+
+.quote-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background-color: #f5f5f5;
+  border-left: 4px solid #e35c3b;
+
+  width: 400px;
+  height: 100px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  padding: 10px;
+  margin: 10px;
+  flex: 0 0 auto;
+}
+
+.profile-icon img {
+  width: 30px;
+  height: 30px;
+  background-size: cover;
+  padding: 20px;
+}
+
+.quote-text {
   font-style: italic;
-}
-
-.container_ulasan h5 {
-  padding: 20px 30px 20px 30px;
-  color: grey;
-  font-size: 25px;
-  font-weight: bold;
+  font-size: 16px;
+  word-wrap: break-word;
+  text-align: left;
 }

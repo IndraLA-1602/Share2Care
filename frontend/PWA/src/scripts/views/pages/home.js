@@ -33,33 +33,30 @@ const Home = {
 
     </div>
     <div class="fitur">
-      <h1>Fitur Unggulan</h1>
+      <h2>Fitur Unggulan</h2>
       <div class="Fitur_list">
         <div class="Card_Fitur">
-          <div class="Card_img">
-            <img src="./public/fitur.png" alt="" style="width:15%">
+          <div class="Card_img1">
           </div>
           <div class="Text_Fitur">
-            <h2>Fitur Unggulan 1</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Ulasan dan Testimoni</h3>
+            <p>Testimoni tentang pengalaman mereka dalam menggunakan platform donasi, sehingga dapat memberikan keyakinan kepada pengguna lainnya</p>
           </div>
         </div>
         <div class="Card_Fitur">
-          <div class="Card_img">
-            <img src="./public/fitur.png" alt="" style="width:15%">
+          <div class="Card_img2">
           </div>
           <div class="Text_Fitur">
-            <h2>Fitur Unggulan 2</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Pilihan Barang Donasi</h3>
+            <p>Memberikan pilihan yang beragam bagi pengguna untuk membeli barang-barang donasi yang akan didistribusikan kepada mereka yang membutuhkan</p>
           </div>
         </div>
         <div class="Card_Fitur">
-          <div class="Card_img">
-            <img src="./public/fitur.png" alt="" style="width:15%">
+          <div class="Card_img3">
           </div>
           <div class="Text_Fitur">
-            <h2>Fitur Unggulan 3</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <h3>Fitur Sosial</h3>
+            <p>Memungkinkan pengguna untuk berbagi informasi dan kampanye donasi melalui media sosial, sehingga dapat meningkatkan jangkauan dan partisipasi donasi</p>
           </div>
         </div>
       </div>
@@ -71,37 +68,36 @@ const Home = {
       <div class="product-cards"></div>
     </div>
 
-    <div class="ulasan">
-      <p>Ulasan Pengguna Share2Care</p>
-      <h1>Kisah Inspiratif Pengguna Share2Care Mewarnai Dunia dengan Donasi dan Kebaikan</h1>
-      <div class="CardUlasan">
-        <div class="container_ulasan">
-          <div class="ulasan_image">
-            <img src="./public/user.png" alt="" style="width:5%">
-          </div>
-            <p> Aplikasi donasi memberikan kesempatan bagi pengguna dari berbagai belahan dunia untuk berpartisipasi dalam memberikan sumbangan. Ini memperluas jangkauan dan dampak potensial dari kampanye donasi, memungkinkan orang-orang dari segala latar belakang untuk membantu dalam penyebab yang mereka anggap penting.</p> 
-            <h5><b>Jane</b></h5> 
-        </div>
-      </div>
-      <div class="CardUlasan">   
-        <div class="container_ulasan">   
-          <div class="ulasan_image">
-            <img src="./public/user.png" alt="" style="width:5%">
-          </div>
-          <p>Aplikasi donasi memungkinkan pengguna untuk dengan mudah menyumbangkan dana dengan hanya beberapa ketukan pada layar smartphone mereka. Mereka biasanya menyediakan antarmuka yang intuitif dan user-friendly, sehingga siapa pun dapat dengan cepat mengakses dan menggunakan aplikasi tersebut.</p> 
-          <h5><b>Doe</b></h5>               
-        </div>
-      </div>
-      <div class="CardUlasan">
-        <div class="container_ulasan">
-          <div class="ulasan_image">
-            <img src="./public/user.png" alt="" style="width:5%">
-          </div>
-          <p>Aplikasi donasi sering kali menyediakan fitur-fitur yang memungkinkan pengguna untuk berbagi kampanye donasi dengan teman-teman mereka di media sosial atau mengundang mereka untuk berpartisipasi. Ini menciptakan efek jaringan yang dapat membantu kampanye mencapai lebih banyak orang, menggalang dana yang lebih banyak, dan meningkatkan kesadaran tentang isu-isu yang relevan.</p> 
-          <h5><b>Jane Doe</b></h5>
-        </div>
-      </div>
+    <div class="tagline"> 
+      <h3 class="tagline-campaign">Ulasan Pengguna Share2Care</h3>
+      <h2 class="subtagline-campaign">Kisah Inspiratif Pengguna Share2Care 
+      Mewarnai Dunia dengan Donasi dan Kebaikan</h2>
     </div>
+
+    <div class="ulasan-container">
+        <div class="ulasan-cards">
+
+            <div class="quote-container">
+              <div class="profile-icon">
+                <img src="./avatar-grey.png">
+              </div>
+              <p class="quote-text">"Saya sangat terkesan dengan website marketplace donasi ini! Tampilannya menarik dan mudah digunakan</p>
+            </div>
+            <div class="quote-container">
+              <div class="profile-icon">
+                <img src="./avatar-grey.png">
+              </div>
+              <p class="quote-text">"Website marketplace donasi ini benar-benar luar biasa! Saya sangat senang bisa berkontribusi melalui donasi online yang mudah dan bermanfaat</p>
+            </div>
+            <div class="quote-container">
+              <div class="profile-icon">
+                <img src="./avatar-grey.png">
+              </div>
+              <p class="quote-text">"Website marketplace donasi ini adalah tempat yang luar biasa untuk menyalurkan bantuan.</p>
+            </div>
+
+        </div>
+      </div>
       `;
   },
 
