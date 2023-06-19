@@ -1,16 +1,20 @@
-import styleR from './styleShadow/styleR.js';
-import responsiveStyle from './styleShadow/styleResponsive.js';
+import styleR from "./styleShadow/styleR.js";
+import responsiveStyle from "./styleShadow/styleResponsive.js";
 
 class AboutUs extends HTMLElement {
   constructor() {
     super();
-    this._shadowRoot = this.attachShadow({ mode: 'open' });
+    this._shadowRoot = this.attachShadow({ mode: "open" });
   }
   connectedCallback() {
     this.render();
   }
   render() {
     this._shadowRoot.innerHTML = `
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
     <style>
         ${styleR}
         ${responsiveStyle}
@@ -87,7 +91,7 @@ class AboutUs extends HTMLElement {
         </div>
         <div class="profile-card">
           <div class="profile-picture">
-            <img src="./faridl.png" alt="">
+            <img src="./faridl.jpeg" alt="">
           </div>
           <div class="profile-info">
             <h3 class="profile-name">Faridl Mukhlashin Akbarullah</h3>
@@ -104,41 +108,41 @@ class AboutUs extends HTMLElement {
       `;
 
     const checkTeamCardVisibility = () => {
-      const teamCards = this._shadowRoot.querySelectorAll('.profile-card');
-      const fiturList = this._shadowRoot.querySelectorAll('.Fitur_list');
-      const productCards = this._shadowRoot.querySelectorAll('.product-cards');
+      const teamCards = this._shadowRoot.querySelectorAll(".profile-card");
+      const fiturList = this._shadowRoot.querySelectorAll(".Fitur_list");
+      const productCards = this._shadowRoot.querySelectorAll(".product-cards");
 
       teamCards.forEach((card) => {
         const rect = card.getBoundingClientRect();
         if (rect.top < window.innerHeight) {
-          card.classList.add('visible');
+          card.classList.add("visible");
         }
       });
       fiturList.forEach((card) => {
         const rect = card.getBoundingClientRect();
         if (rect.top < window.innerHeight) {
-          card.classList.add('visible');
+          card.classList.add("visible");
         }
       });
       productCards.forEach((card) => {
         const rect = card.getBoundingClientRect();
         if (rect.top < window.innerHeight) {
-          card.classList.add('visible');
+          card.classList.add("visible");
         }
       });
     };
 
-    window.addEventListener('hashchange', () => {
+    window.addEventListener("hashchange", () => {
       checkTeamCardVisibility();
     });
 
-    window.addEventListener('load', () => {
+    window.addEventListener("load", () => {
       checkTeamCardVisibility();
     });
 
-    window.addEventListener('scroll', checkTeamCardVisibility);
-    window.addEventListener('resize', checkTeamCardVisibility);
+    window.addEventListener("scroll", checkTeamCardVisibility);
+    window.addEventListener("resize", checkTeamCardVisibility);
   }
 }
 
-customElements.define('about-us', AboutUs);
+customElements.define("about-us", AboutUs);
