@@ -2,6 +2,10 @@
 
 Capstone Project SIB Dicoding Front End Back End Batch 4
 
+# Project Utama
+project utama ada di folder frontend/pwa dan folder backend
+abaikan file lain diluar folder tersebut
+
 # Cara Run Backend
 
 Buat database dengan nama "capstone"
